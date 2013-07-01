@@ -1,0 +1,12 @@
+# XCode
+XVim
+.xvimrc
+Uncrustify
+
+# Mac
+.bash_profile
+.ssh/config
+.vimrc
+.git-auto-complete
+.gitignore
+cursor color
