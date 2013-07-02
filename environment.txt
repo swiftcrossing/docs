@@ -1,12 +1,17 @@
 # XCode
 XVim
 .xvimrc
+.gitignore
+.uncrustifyconfig
 Uncrustify
 
 # Mac
 .bash_profile
+.gitconfig
 .ssh/config
 .vimrc
-.git-auto-complete
+.gitk
+.git-completion.bash
 .gitignore
+.uncrustifyconfig
 cursor color
