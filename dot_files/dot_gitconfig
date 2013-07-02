@@ -1,0 +1,31 @@
+[user]
+	name = Nolan Warner
+	email = renrawnalon@gmail.com
+[color]
+	ui = true
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[core]
+	quotepath = false
+[alias]
+	a = add
+	ap = add -p
+	b = branch
+	c = commit
+	d = diff
+	dt = difftool
+	dc = diff --cached
+	f = fetch
+	fp = fetch -p
+	l = log
+	co = checkout
+	cob = checkout -b
+	rb = rebase
+	rbi = rebase -i
+	rh = reset HEAD
+	s = status
+	st = stash
+[rerere]
+	enabled = true

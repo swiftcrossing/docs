@@ -1,0 +1,13 @@
+KeepAlive yes
+ServerAliveInterval 60
+
+Host mac
+	Hostname github.com
+	User nolan.warner
+	IdentityFile /Users/nolan.warner/.ssh/id_rsa
+
+Host gitlab
+	Hostname gitlab.com
+	User nolan.warner
+	IdentityFile /Users/nolan.warner/.ssh/id_rsa
+

@@ -1,0 +1,42 @@
+export PS1='\u@\H:\w$ '
+export SVN_EDITOR=vim
+export PATH=$PATH:/Applications/eclipse/android-sdk-macosx/platform-tools/:/usr/bin/
+
+# Setting PATH for Python 2.7
+# The orginal version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
+export PATH
+
+# git autocomplete
+source ~/.git-completion.bash
+
+# bash Aliases
+alias ll='ls -la'
+
+# vim Aliases
+alias vimproj='vim GPSPunch/GPSPunch.xcodeproj/project.pbxproj'
+
+# git Aliases
+alias ga='git add'
+alias gap='git add -p'
+alias gb='git branch'
+alias gc='git commit'
+alias gd='git diff'
+alias gdt='git difftool'
+alias gdc='git diff --cached'
+alias gf='git fetch'
+alias gfp='git fetch -p'
+alias gl='git log'
+alias gs='git status'
+alias gco='git checkout'
+alias grb='git rebase'
+alias grbc='git rebase --continue'
+alias grbi='git rebase -i'
+alias gcood='git checkout origin/develop'
+alias grbod='git rebase origin/develop'
+alias grbiod='git rebase -i origin/develop'
+alias grh='git reset HEAD'
+alias gst='git stash'
+
+# gitk Aliases
+alias gitk='gitk 2>/dev/null &'
