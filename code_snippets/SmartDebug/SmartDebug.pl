@@ -1,8 +1,7 @@
 #!/usr/local/bin/perl
 
-@array = ('asdf', 'debug', 'src', 'other');
+@array = `grep -rn "PrintLog(" $ARGV[1] | sed -nE 's/.*PrintLog\\(@"([^"]*)", .*/\\1/p' | sort | uniq`;
 
-#$debug_plist = './GitUseExample/SmartDebug/SmartDebug.plist';
 $debug_plist = $ARGV[0];
 
 # read original file
@@ -25,15 +24,21 @@ print DATA_OUT "<dict>\n";
 # do not print keys that have been removed
 $do_next_line = 0;
 foreach $line (@in_lines) {
+    print "THELINE: $line\n";
 	if ($do_next_line == 1) {
 		print DATA_OUT "$line";
 		$do_next_line = 0;
 		break;
 	}
 
+    print "111";
 	if ($line =~ /<key>.*<\/key>/) {
+        print "222";
 		foreach $val (@array) {
+            chomp $val;
+            print "333-<key>$val<\/key>-";
 			if ($line =~ /.*<key>$val<\/key>.*/) {
+                print "444";
 				print DATA_OUT "$line";
 				$do_next_line = 1;
 				break;
@@ -44,6 +49,7 @@ foreach $line (@in_lines) {
 
 # add new keys to bottom of list with value of true
 foreach $val (@array) {
+    chomp $val;
 	$exists = 0;
 	foreach $line (@in_lines) {
 		if ($line =~ /<key>$val<\/key>/) {
