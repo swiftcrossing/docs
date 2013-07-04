@@ -15,6 +15,7 @@ alias ll='ls -la'
 
 # vim Aliases
 alias vimproj='vim GPSPunch/GPSPunch.xcodeproj/project.pbxproj'
+alias vimbp="vim $HOME/.bash_profile; . $HOME/.bash_profile; echo 'Bash profile updated and changes applied'"
 
 # git Aliases
 alias ga='git add'
