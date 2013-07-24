@@ -28,8 +28,8 @@ source ~/.git-completion.bash
 alias ll='ls -la'
 
 # vim Aliases
-alias vimproj='vim GPSPunch/GPSPunch.xcodeproj/project.pbxproj'
-alias vimbp="vim $HOME/.bash_profile; . $HOME/.bash_profile; echo 'Bash profile updated and changes applied'"
+alias bashrc="vim $HOME/.bashrc; . $HOME/.bash_profile; echo 'Bash profile updated and changes applied'"
+alias vimrc="vim $HOME/.vimrc"
 
 # git Aliases
 alias ga='git add'
@@ -55,3 +55,6 @@ alias gst='git stash'
 
 # gitk Aliases
 alias gitk='gitk 2>/dev/null &'
+
+# GPS Punch Aliases
+alias vimproj='vim /Users/nolanwarner/Workspace/iOS/GPSPunch/GPSPunchNewUI/GPSPunch/GPSPunch.xcodeproj/project.pbxproj'
