@@ -13,10 +13,12 @@ function super_link {
     file_name=$1
     link_target=$2
 
-    [ ! -e $link_target -o -L $link_target ] || \
-        die "ERROR! $link_target is not a link, so exiting."
-
-    ln -sf $file_name $link_target
+    if [ ! -e $link_target -o -L $link_target ]
+	then
+		ln -sf $file_name $link_target
+	else
+		echo "ERROR! $link_target is not a link, so exiting."
+	fi
 }
 
 function make_directory {
