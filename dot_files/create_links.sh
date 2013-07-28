@@ -42,8 +42,9 @@ super_link $HOME/docs/dot_files/dot_gitconfig $HOME/.gitconfig
 # gitk files
 super_link $HOME/docs/dot_files/dot_gitk $HOME/.gitk
 
-# xcode uncrustify files
+# xcode files
 super_link $HOME/docs/dot_files/dot_uncrustifyconfig $HOME/.uncrustifyconfig
+super_link $HOME/docs/dot_files/dot_xvimrc $HOME/.xvimrc
 
 # git bash completion files
 super_link $HOME/docs/dot_files/dot_git-completion.bash $HOME/.git-completion.bash

@@ -1,0 +1,81 @@
+filetype plugin on
+filetype indent on
+
+set smartindent
+set number
+set fileencodings=utf-8
+setglobal fileencoding=utf-8
+set encoding=utf-8
+set ttymouse=xterm2		" mouse scrolling in vim
+set mouse=a
+set foldenable
+set background=dark
+set tabstop=4			" 4-space tab indent width
+set shiftwidth=4		" allows you to use < and > to indent/unindent blocks
+set softtabstop=4		" see multiple space characters as a tab
+set shiftround			" Indent to nearest tab stop
+set autoindent			" carries over previous indent to the next line
+set smarttab			" A tab infront of a line inserts spaces or tabs according to expandtab
+
+" Tell vim to remember certain things when we exit
+"  '100 : marks will be remembered for up to 100 previously edited files
+"  "100 : will save up to 100 lines for each register
+"  :20 : up to 20 lines of command-line history will be remembered
+"  % : saves and restores the buffer list
+"  n... : where to save the viminfo files
+set viminfo='100,\"100,:20,%,n~/.viminfo
+
+set wildmode=list:longest	" When autocompleting things, do it like the shell
+set wildmenu				" Autocomplete things on the menu?
+set scrolloff=3				" Scroll when the cursor is 3 lines from top or bottom
+set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp " Editing two files with the same name but in different directories, then closing them both simultaneously will attempt to create two backup files of the same name in this directory, opening a potal to hell
+set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp " Editing two files with the same name but in different directories, then closing them both simultaneously will attempt to create two backup files of the same name in this directory, opening a potal to hell
+set ruler					" know how far you are in a file
+set enc=utf-8
+set fenc=utf-8
+"set fencs=iso-2022-jp,euc-jp,cp932
+set backspace=indent,eol,start	" make sure backspace works correctly
+
+" Used with gvim?
+"set guifont=Bitstream\ Vera\ Sans\ Mono\ 14 "font names to be used in gui
+
+" try to always use a syntax
+syntax on
+
+" this combination works out well to only apply case to searches
+" if there is an uppercase letter in your search string
+set ignorecase
+set smartcase
+
+" this uses the tags file if it is found anywhere above this directory
+" in a file called tags.  If it can't find it, it then looks for a file
+" called build/tags in any directory above this one
+set tags+=tags;$HOME,build/tags;$HOME
+
+" always show a tabline
+set showtabline=2
+
+colorscheme darkblue
+"colorscheme default
+"colorscheme delek
+"colorscheme desert
+"colorscheme torte
+
+" highlight tab line differently
+hi TabLine term=bold,reverse cterm=bold ctermfg=black ctermbg=white
+hi TabLineFill term=bold,reverse cterm=bold ctermfg=white ctermbg=white
+hi TabLineSel term=reverse ctermfg=white ctermbg=lightblue
+
+" highlight the popup menu a little differently
+hi PmenuSel ctermbg=lightblue
+
+" make sure the normal background is black
+hi Normal guibg=black
+
+" use <C-h> and <C-l> to go forward and backward in tabs
+" nnoremap just makes a normal mode mapping
+nnoremap <C-h> gT
+nnoremap <C-l> gt
+
+" in input mode, what about we try using jj as escape
+" inoremap jj <Esc>
