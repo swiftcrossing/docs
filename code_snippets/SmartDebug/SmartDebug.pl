@@ -1,6 +1,6 @@
 #!/usr/local/bin/perl
 
-@array = `grep -rn "PrintLog(" $ARGV[1] | sed -nE 's/.*PrintLog\\(@"([^"]*)", .*/\\1/p' | sort | uniq`;
+@array = `grep -rn "PrintLog(" . | sed -nE 's/.*PrintLog\\(@"([^"]*)", .*/\\1/p' | sort | uniq`;
 
 $debug_plist = $ARGV[0];
 
