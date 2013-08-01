@@ -36,6 +36,9 @@ function make_directory {
 super_link $HOME/docs/dot_files/dot_bashrc $HOME/.bashrc
 super_link $HOME/docs/dot_files/dot_bash_profile $HOME/.bash_profile
 
+# screenrc files
+super_link $HOME/docs/dot_files/dot_screenrc $HOME/.screenrc
+
 # gitconfig files
 super_link $HOME/docs/dot_files/dot_gitconfig $HOME/.gitconfig
 

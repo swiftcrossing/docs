@@ -1,0 +1,47 @@
+
+
+
+
+termcapinfo xterm|xterms|xs|rxvt ti@:te@
+
+term screen-256color
+
+hardstatus on
+hardstatus alwayslastline
+hardstatus string "%{= wb}%-w%{.yb}%n %t%{-}%+w %=%{b r} %H %{..b}[%l] %{..K}%C%a "
+
+#caption always "%{kB}%?%-Lw%?%{bw}%n*%f %t%?(%u)%?%{kB}%?%+Lw%?"
+
+startup_message off
+
+# turn off visual bell
+vbell off
+
+# Autodetach session on hangup instead of terminating screen completely
+autodetach on 
+
+# Instead of Control-a, make the escape/command character be Control-b
+#escape ^Zz 
+
+# give more scroll back
+defscrollback 2000
+
+# turn on alternate screen support
+altscreen on
+
+
+# bash will be replaced by the running command
+shelltitle " $ |bash"
+
+# bash will get the running command added after it
+#shelltitle "$ |bash:"
+
+
+screen 7
+screen 6
+screen 5
+screen 4
+screen 3
+screen 2
+screen 1
+
