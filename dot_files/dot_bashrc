@@ -58,4 +58,6 @@ alias gst='git stash'
 alias gitk='gitk 2>/dev/null &'
 
 # GPS Punch Aliases
-alias vimproj='vim /Users/nolanwarner/Workspace/iOS/GPSPunch/GPSPunchNewUI/GPSPunch/GPSPunch.xcodeproj/project.pbxproj'
+alias vimproj="vim $HOME/Workspace/iOS/GPSPunch/GPSPunchNewUI/GPSPunch/GPSPunch.xcodeproj/project.pbxproj"
+alias gpsnew="cd $HOME/Workspace/iOS/GPSPunch/GPSPunchNewUI/GPSPunch"
+alias gpsold="cd $HOME/Workspace/iOS/GPSPunch/GPSPunchOldUI/GPSPunch"
