@@ -8,7 +8,8 @@ GREEN="\[\033[0;32m\]"
 BLUE="\[\033[0;34m\]"
 NO_COLOR="\[\033[0m\]"
 
-export PS1="$NO_COLOR\w$YELLOW\$(parse_git_branch)$NO_COLOR\$ "
+export PROMPT_COMMAND='PS1X=$(p="${PWD#${HOME}}"; [ "${PWD}" != "${p}" ] && printf "~"; IFS=/; for q in ${p:1}; do printf /${q:0:2}; done; printf "${q:2}")'
+export PS1="$NO_COLOR\${PS1X}$YELLOW\$(parse_git_branch)$NO_COLOR\$ "
 export SVN_EDITOR=vim
 export PATH=$PATH:/Applications/eclipse/android-sdk-macosx/platform-tools/:/usr/bin/
 
