@@ -58,6 +58,9 @@ alias gst='git stash'
 # gitk Aliases
 alias gitk='gitk 2>/dev/null &'
 
+# screen Aliases
+alias screen='screen -r'
+
 # GPS Punch Aliases
 alias vimproj="vim $HOME/Workspace/iOS/GPSPunch/GPSPunchNewUI/GPSPunch/GPSPunch.xcodeproj/project.pbxproj"
 alias gpsnew="cd $HOME/Workspace/iOS/GPSPunch/GPSPunchNewUI/GPSPunch"
