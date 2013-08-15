@@ -13,6 +13,13 @@ export PS1="$NO_COLOR\${PS1X}$YELLOW\$(parse_git_branch)$NO_COLOR\$ "
 export SVN_EDITOR=vim
 export PATH=$PATH:/Applications/eclipse/android-sdk-macosx/platform-tools/:/usr/bin/
 
+# Unversioned aliases 
+if [ -f ~/.bash_aliases ];
+then
+	echo 'Sourced .bash_aliases'
+	source ~/.bash_aliases
+fi
+
 # Setting PATH for Python 2.7
 # The orginal version is saved in .bash_profile.pysave
 PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
