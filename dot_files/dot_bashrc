@@ -56,9 +56,6 @@ alias gco='git checkout'
 alias grb='git rebase'
 alias grbc='git rebase --continue'
 alias grbi='git rebase -i'
-alias gcood='git checkout origin/develop'
-alias grbod='git rebase origin/develop'
-alias grbiod='git rebase -i origin/develop'
 alias grh='git reset HEAD'
 alias gst='git stash'
 
@@ -67,8 +64,3 @@ alias gitk='gitk 2>/dev/null &'
 
 # screen Aliases
 alias screen='screen -r'
-
-# GPS Punch Aliases
-alias vimproj="vim $HOME/Workspace/iOS/GPSPunch/GPSPunchNewUI/GPSPunch/GPSPunch.xcodeproj/project.pbxproj"
-alias gpsnew="cd $HOME/Workspace/iOS/GPSPunch/GPSPunchNewUI/GPSPunch"
-alias gpsold="cd $HOME/Workspace/iOS/GPSPunch/GPSPunchOldUI/GPSPunch"
