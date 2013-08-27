@@ -64,3 +64,6 @@ make_directory $HOME/.vim
 # NERD_tree
 super_link $HOME/docs/dot_files/dot_vim_nerdtree/ $HOME/.vim/nerdtree
 
+# FuzzyFinder
+super_link $HOME/docs/dot_files/dot_vim_fuzzyfinder/ $HOME/.vim/fuzzyfinder
+super_link $HOME/docs/dot_files/dot_vim_l9/ $HOME/.vim/l9

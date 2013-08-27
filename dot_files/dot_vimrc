@@ -36,6 +36,8 @@ set fenc=utf-8
 "set fencs=iso-2022-jp,euc-jp,cp932
 set backspace=indent,eol,start	" make sure backspace works correctly
 
+set runtimepath+=~/.vim/fuzzyfinder
+set runtimepath+=~/.vim/l9
 set runtimepath+=~/.vim/nerdtree
 
 " Used with gvim?
@@ -83,6 +85,7 @@ nnoremap <C-l> gt
 nmap ,n :NERDTreeFind<CR>
 " Toggle NERDTree
 nmap ,m :NERDTreeToggle<CR>
+nmap ,b :FufFile<CR>
 
 " in input mode, what about we try using jj as escape
 inoremap jj <Esc>
