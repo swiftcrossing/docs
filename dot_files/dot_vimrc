@@ -36,6 +36,8 @@ set fenc=utf-8
 "set fencs=iso-2022-jp,euc-jp,cp932
 set backspace=indent,eol,start	" make sure backspace works correctly
 
+set runtimepath+=~/.vim/nerdtree
+
 " Used with gvim?
 "set guifont=Bitstream\ Vera\ Sans\ Mono\ 14 "font names to be used in gui
 
@@ -76,6 +78,11 @@ hi Normal guibg=black
 " nnoremap just makes a normal mode mapping
 nnoremap <C-h> gT
 nnoremap <C-l> gt
+
+" Jump to current file in tree
+nmap ,n :NERDTreeFind<CR>
+" Toggle NERDTree
+nmap ,m :NERDTreeToggle<CR>
 
 " in input mode, what about we try using jj as escape
 inoremap jj <Esc>
