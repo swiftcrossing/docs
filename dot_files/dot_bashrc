@@ -63,4 +63,4 @@ alias gst='git stash'
 alias gitk='gitk 2>/dev/null &'
 
 # screen Aliases
-alias screen='screen -r'
+alias screen='screen -R'
