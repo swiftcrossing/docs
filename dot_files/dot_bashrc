@@ -37,6 +37,7 @@ alias ll='ls -la'
 
 # vim Aliases
 alias bashrc="vim $HOME/.bashrc; if [ -f $HOME/.bash_profile ] ; then . $HOME/.bash_profile ; echo 'Sourced .bash_profile' ; else . $HOME/.bashrc ; echo 'Sourced .bashrc' ; fi"
+alias bashaliases="vim $HOME/.bash_aliases; . $HOME/.bash_aliasees ; echo 'Sourced .bash_aliases' ;"
 alias vimrc="vim $HOME/.vimrc"
 
 # git Aliases
