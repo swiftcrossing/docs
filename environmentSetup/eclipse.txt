@@ -1,0 +1,15 @@
+1. Install ADT
+2. Update Android SDK
+ - Window > SDK Manager
+ - Install 4.0 and up.
+  - Manually download and install from http://dl-ssl.google.com/android/repository/addon.xml
+   - Ex. http://dl-ssl.google.com/android/repository/google_apis-14_r02.zip
+3. Install Vrapper
+ - http://vrapper.sourceforge.net/home/
+ - Install latest version.
+ - Add features and plugins contents to Eclipse/features and eclipse/plugins.
+4. Set encoding
+ - Windows > Preferences > General > Content Types, set UTF-8 as the default encoding for all content types.
+ - Windows > Preferences > General > Workspaces, set "Text file encoding" to "Other : UTF-8".
+5. Setup keybindings
+ - Import csv file from git@github.com:renrawnalon/docs.git in the elipse directory.
