@@ -1,0 +1,6 @@
+# XCode
+XVim
+.xvimrc
+.gitignore
+.uncrustifyconfig
+Uncrustify
