@@ -28,3 +28,6 @@
 	st = stash
 [rerere]
 	enabled = true
+[user]
+	name = Nolan Warner
+	email = renrawnalon@gmail.com
