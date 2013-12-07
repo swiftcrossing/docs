@@ -1,3 +1,31 @@
+set nocompatible		" Explicitly turn off compatibility mode
+filetype off
+
+if isdirectory(expand("~/.vim/bundle/neobundle/.git"))
+	set runtimepath+=~/.vim/bundle/neobundle/
+	call neobundle#rc(expand('~/.vim/bundle/'))
+
+	" Let NeoBundle manage NeoBundle
+	NeoBundleFetch 'Shougo/neobundle.vim'
+	" Brief help
+	" :NeoBundleList          - list configured bundles
+	" :NeoBundleInstall(!)    - install(update) bundles
+	" :NeoBundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+	" NOTE: comments after NeoBundle commands are not allowed.
+
+	" Recommended to install
+	" After install, turn shell ~/.vim/bundle/vimproc, (n,g)make -f your_machines_makefile
+	NeoBundle 'Shougo/vimproc'
+
+	" vim-scripts repos
+	NeoBundle 'L9'
+	NeoBundle 'FuzzyFinder'
+	NeoBundle 'scrooloose/nerdtree'
+
+	" Installation check.
+	NeoBundleCheck
+endif
+
 filetype plugin on
 filetype indent on
 

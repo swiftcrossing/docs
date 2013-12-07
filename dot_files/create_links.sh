@@ -60,3 +60,25 @@ super_link $HOME/docs/dot_files/dot_git-completion.bash $HOME/.git-completion.ba
 super_link $HOME/docs/dot_files/dot_vimrc $HOME/.vimrc
 make_directory $HOME/.vim
 
+# install vim vundles if it doesn't already exist
+if [ ! -d "$HOME/.vim/bundle/neobundle/.git" ] ; then
+	echo "cloning neobundle..."
+	echo
+	mkdir -p "$HOME/.vim/bundle"
+	mkdir -p "$HOME/.vim/bundle/neobundle"
+	git clone https://github.com/Shougo/neobundle.vim $HOME/.vim/bundle/neobundle
+	echo
+	echo "installing all bundles by opening vim and running :BundleInstall"
+	vim +NeoBundleInstall +qall
+	echo
+	echo "There may be extra files that need to be installed by hand in order"
+	echo "to get all the vim bundles working correctly.  Read the top of .vimrc"
+	echo "and install everything that is needed (this is stuff like ghc-mod, hlint, etc)."
+	echo "You might want to install things with a cabal command like this:"
+	echo "(Remember, you might need to source your .bashrc to get the ~/.cabal/bin directory"
+	echo "added to the path)"
+	echo
+	echo "\`cabal install happy -j8 && source ~/.bashrc && cabal install ghc-mod hoogle hlint hdevtools -j8\`"
+else
+	vim +NeoBundleCheck +qall
+fi
