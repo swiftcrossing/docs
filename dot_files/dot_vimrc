@@ -79,6 +79,9 @@ syntax on
 set ignorecase
 set smartcase
 
+set incsearch " Automatically jump to search term
+set hlsearch  " Highlight search results
+
 " this uses the tags file if it is found anywhere above this directory
 " in a file called tags.  If it can't find it, it then looks for a file
 " called build/tags in any directory above this one
@@ -104,16 +107,22 @@ hi PmenuSel ctermbg=lightblue
 " make sure the normal background is black
 hi Normal guibg=black
 
+" use <Scape>h for turning off and on hlsearch,
+" in both input mode (imap?) and command mode (map?)
+nmap <Space>h :set hlsearch!<CR>
+imap <Space>h <ESC>:set hlsearch!<CR>a
+
 " use <C-h> and <C-l> to go forward and backward in tabs
 " nnoremap just makes a normal mode mapping
 nnoremap <C-h> gT
 nnoremap <C-l> gt
 
 " Jump to current file in tree
-nmap ,n :NERDTreeFind<CR>
+nmap <Space>n :NERDTreeFind<CR>
 " Toggle NERDTree
-nmap ,m :NERDTreeToggle<CR>
-nmap ,b :FufFile<CR>
+nmap <Space>m :NERDTreeToggle<CR>
+" File search on FuzzySearch
+nmap <Space>b :FufFile<CR>
 
 " in input mode, what about we try using jj as escape
 inoremap jj <Esc>
