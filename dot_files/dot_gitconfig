@@ -6,6 +6,7 @@
 	prompt = false
 [core]
 	quotepath = false
+	editor = /usr/bin/vim
 [alias]
 	a = add
 	ap = add -p
@@ -31,3 +32,5 @@
 [user]
 	name = Nolan Warner
 	email = renrawnalon@gmail.com
+[push]
+	default = simple
