@@ -90,6 +90,11 @@ set tags+=tags;$HOME,build/tags;$HOME
 " always show a tabline
 set showtabline=2
 
+" Let Leader key be <Space> instead of \
+let mapleader = " "
+
+nnoremap <esc><esc> :nohlsearch<CR>
+
 colorscheme darkblue
 "colorscheme default
 "colorscheme delek
@@ -107,10 +112,8 @@ hi PmenuSel ctermbg=lightblue
 " make sure the normal background is black
 hi Normal guibg=black
 
-" use <Scape>h for turning off and on hlsearch,
-" in both input mode (imap?) and command mode (map?)
-nmap <Space>h :set hlsearch!<CR>
-imap <Space>h <ESC>:set hlsearch!<CR>a
+" use <Leader>h for turning off and on hlsearch
+map <Leader>h :set hlsearch!<CR>
 
 " use <C-h> and <C-l> to go forward and backward in tabs
 " nnoremap just makes a normal mode mapping
@@ -118,11 +121,11 @@ nnoremap <C-h> gT
 nnoremap <C-l> gt
 
 " Jump to current file in tree
-nmap <Space>n :NERDTreeFind<CR>
+nnoremap <Leader>n :NERDTreeFind<CR>
 " Toggle NERDTree
-nmap <Space>m :NERDTreeToggle<CR>
+nnoremap <Leader>m :NERDTreeToggle<CR>
 " File search on FuzzySearch
-nmap <Space>b :FufFile<CR>
+nnoremap <Leader>b :FufFile<CR>
 
 " in input mode, what about we try using jj as escape
 inoremap jj <Esc>
