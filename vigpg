@@ -1,0 +1,97 @@
+#!/bin/bash
+# Edit a file that has been encoded with gpg.
+
+# this gets us some functions and variables needed by various programs
+if [[ -e "${HOME}/docs/code/library.sh" ]] ; then
+	source "${HOME}/docs/code/library.sh"
+fi
+
+function usage {
+	echo "Usage: $0 FILE"
+}
+
+# exit after printing first argument to this function
+function die {
+    # echo the first argument
+    echo $1
+
+    exit 1
+}
+
+# this will get the location of $1 (from the $PATH)
+function get_location_of_file()
+{
+    tmp_filename=$1
+    tmp_fullpath=`which ${tmp_filename} 2>/dev/null`
+
+    if [ -n "${tmp_fullpath}" ]
+    then
+        echo ${tmp_fullpath}
+    fi
+}
+
+# this takes an argument list of filenames and outputs
+# the first one that can be found on $PATH.
+# It outputs a full path to the file.
+function get_correct_filename_from_choices()
+{
+    while ((1))
+    do
+        # break if there are no more arguments
+        if [ -z $1 ]
+        then
+            break
+        fi
+
+        # get the full path of the filename
+        tmp_filename=$1
+        shift
+        tmp_fullpath=`get_location_of_file ${tmp_filename}`
+
+        # if this program is on $PATH, echo it's full path
+        # and get out of this loop
+        if [ -n "${tmp_fullpath}" ]
+        then
+            echo ${tmp_fullpath}
+            break
+        fi
+    done
+}
+
+GPG=`get_correct_filename_from_choices "gpg1" "gpg"`
+
+# make sure there is only one argument
+if [ "$#" != "1" ]
+then
+	usage
+	exit 1
+fi
+
+file_name=$1
+
+# make sure the argument is a file
+[[ -f $file_name ]] || die "ERROR! $file_name is not a file."
+
+# get us a temp file
+temp_file=`mktemp puppies.XXXXXX`
+
+# read in password
+
+read -s -p "Password: " password
+echo 
+
+# unencrypt the file and put it's output in tempfile
+echo $password | $GPG --passphrase-fd 0 -d ${file_name} > ${temp_file} || 
+	die "ERROR! Could not decrypt $file_name"
+
+# edit the tempfile
+$EDITOR ${temp_file} || 
+	die "ERROR! Could not edit the decrypted file ${temp_file}"
+
+# reencrypt the tempfile
+echo $password | $GPG --passphrase-fd 0 -c -o ${file_name} ${temp_file} || 
+	die "ERROR! Could not reencrypt ${temp_file} to ${file_name}."
+
+# delete the tempfile
+rm ${temp_file}
+
