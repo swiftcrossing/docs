@@ -28,3 +28,8 @@ which git
 
 #If it does not, run:
 brew doctor
+
+#################
+# Install f.lux #
+#################
+https://justgetflux.com
