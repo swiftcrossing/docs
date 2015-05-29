@@ -4,3 +4,23 @@ XVim
 .gitignore
 .uncrustifyconfig
 Uncrustify
+
+#####################################
+# Install  Alcatraz - Plugin Manager#
+#####################################
+curl -fsSL https://raw.githubusercontent.com/supermarin/Alcatraz/master/Scripts/install.sh | sh
+
+###################
+# Xcode  Packages #
+###################
+BBUncrustifyPlugin                # Automatic code formatting
+CocoaPods                         # Package Manager
+CocoaPodsUI                       # UI for CocoaPods package manager
+FuzzyAutocomplete                 # Fuzzy autocomplete
+InjectionPlugin                   # Inject code into running applications
+KSImageNamed                      # Autocomplete for image names
+Lin                               # Autocomplete for NSLocalizedStrings
+QuickLocalization                 # Convert strings into localized strings
+XToDo                             # Allows you to collect and list 'TODO', 'FIXME', '???', '!!!'
+XVim                              # Vim commands inside Xcode
+
