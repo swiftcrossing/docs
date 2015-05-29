@@ -12,6 +12,7 @@ export PROMPT_COMMAND='PS1X=$(p="${PWD#${HOME}}"; [ "${PWD}" != "${p}" ] && prin
 export PS1="$NO_COLOR\${PS1X}$YELLOW\$(parse_git_branch)$NO_COLOR\$ "
 export SVN_EDITOR=vim
 export PATH=$PATH:/Applications/eclipse/android-sdk-macosx/platform-tools/:/usr/bin/
+export EDITOR=vim
 
 # Unversioned aliases 
 if [ -f ~/.bash_aliases ];
@@ -66,3 +67,7 @@ alias gitk='gitk 2>/dev/null &'
 
 # screen Aliases
 alias screen='screen -R'
+
+# puppie Aliases
+alias pshow='LC_ALL=C gpg -d ~/cute_puppies/cute_puppies.gpg'
+alias pedit='LC_ALL=C ~/docs/vigpg ~/cute_puppies/cute_puppies.gpg'
