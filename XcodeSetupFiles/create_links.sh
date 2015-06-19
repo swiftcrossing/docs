@@ -43,3 +43,11 @@ for filename in $docspath*.codesnippet; do
 	super_link $filename $linkpath${filename#$docspath}
 done
 
+# Xcode Fonts and Colors files
+make_directory $HOME/Library/Developer/Xcode/UserData/FontAndColorThemes/
+docspath=$HOME/docs/XcodeSetupFiles/FontAndColorThemes/
+linkpath=$HOME/Library/Developer/Xcode/UserData/FontAndColorThemes/
+for filename in $docspath*.dvtcolortheme; do
+	super_link $filename $linkpath${filename#$docspath}
+done
+
