@@ -22,8 +22,10 @@
 	dt = difftool
 	dc = diff --cached
 	f = fetch
+	fa = fetch --all
 	fp = fetch -p
 	l = log
+	mnf = merge --no-ff
 	rb = rebase
 	rbi = rebase -i
 	rh = reset HEAD
