@@ -5,8 +5,29 @@ XVim
 .uncrustifyconfig
 Uncrustify
 
+####################
+# Install Homebrew #
+####################
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+##################
+# Install xctool #
+##################
+brew update; brew install -v --HEAD xctool
+
+####################
+# Install carthage #
+####################
+brew update; brew install carthage
+
+#####################
+# Install CocoaPods #
+#####################
+sudo gem install cocoapods
+sudo gem install cocoapods-rome
+
 #####################################
-# Install  Alcatraz - Plugin Manager#
+# Install Alcatraz - Plugin Manager #
 #####################################
 curl -fsSL https://raw.githubusercontent.com/supermarin/Alcatraz/master/Scripts/install.sh | sh
 
@@ -23,4 +44,5 @@ Lin                               # Autocomplete for NSLocalizedStrings
 QuickLocalization                 # Convert strings into localized strings
 XToDo                             # Allows you to collect and list 'TODO', 'FIXME', '???', '!!!'
 XVim                              # Vim commands inside Xcode
+XcodeColors                       # XcodeColors allows you to use colors in the Xcode debugging console.
 
