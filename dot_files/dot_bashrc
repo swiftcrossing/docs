@@ -46,6 +46,7 @@ alias vimproj="vim  $(git rev-parse --show-toplevel)/*.xcodeproj/project.pbxproj
 
 # git Aliases
 alias ga='git add'
+alias gaa='git add -A'
 alias gap='git add -p'
 alias gaproj='git aproj'
 alias gb='git branch'
