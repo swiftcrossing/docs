@@ -2,27 +2,22 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>continuation</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>TopLevel</string>
+		<string>ClassInterfaceMethods</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>@interface &lt;#Class Name#&gt; ()
-&lt;#Continuation#&gt;
-@end</string>
+	<string>-(void)someMethodThatTakesABlock:(&lt;#returnType#&gt; (^)(&lt;#parameterTypes#&gt;))&lt;#blockName#&gt;;
+</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>90D23723-E1D4-48E7-9B4B-32CAF98004BC</string>
+	<string>4D0CC342-EBEE-47C0-8D12-167D5686AA16</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Objective-C</string>
-	<key>IDECodeSnippetSummary</key>
-	<string>Anonymous category to define private methods in an implementation</string>
+	<string>Xcode.SourceCodeLanguage.Objective-C-Plus-Plus</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Class Continuation</string>
+	<string>My Code Snippet</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>
