@@ -67,7 +67,9 @@ alias gs='git status'
 alias grb='git rebase'
 alias grbc='git rebase --continue'
 alias grbi='git rebase -i'
-alias grh='git reset HEAD'
+alias grbo='git rebase --onto'
+alias grhe='git reset HEAD'
+alias grha='git reset --hard'
 alias gst='git stash'
 
 # gitk Aliases

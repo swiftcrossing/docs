@@ -28,7 +28,9 @@
 	mnf = merge --no-ff
 	rb = rebase
 	rbi = rebase -i
-	rh = reset HEAD
+	rbo = rebase --onto
+	rhe = reset HEAD
+	rha = reset --hard
 	s = status
 	st = stash
 [rerere]
