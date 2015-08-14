@@ -44,7 +44,7 @@ alias bashrc="vim $HOME/.bashrc; if [ -f $HOME/.bash_profile ] ; then . $HOME/.b
 alias bashaliases="vim $HOME/.bash_aliases; . $HOME/.bash_aliasees ; echo 'Sourced .bash_aliases' ;"
 alias vimrc="vim $HOME/.vimrc"
 alias gitconfig="vim $HOME/.gitconfig"
-alias vimproj="vim  $(git rev-parse --show-toplevel)/*.xcodeproj/project.pbxproj"
+alias vimproj="echo $(git rev-parse --show-toplevel); vim  $(git rev-parse --show-toplevel)/*.xcodeproj/project.pbxproj"
 
 # git Aliases
 alias ga='git add'
