@@ -197,7 +197,7 @@ def strings_from_encoded_file(file_path, encoding):
     return localized_strings
 
 
-def strings_to_file(localized_strings, file_path, encoding='utf16'):
+def strings_to_file(localized_strings, file_path, encoding='utf8'):
     '''
     Write a strings file at file_path containing string in
     the localized_strings dictionnary.
