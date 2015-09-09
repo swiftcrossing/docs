@@ -37,6 +37,11 @@ sudo gem install cocoapods-rome
 #####################################
 curl -fsSL https://raw.githubusercontent.com/supermarin/Alcatraz/master/Scripts/install.sh | sh
 
+#################################################
+# Download and install Network Link Conditioner #
+#################################################
+https://developer.apple.com/downloads/index.action?q=Hardware%20IO%20Tools
+
 ###################
 # Xcode  Packages #
 ###################
