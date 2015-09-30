@@ -26,6 +26,12 @@ brew update; brew install -v --HEAD xctool
 ####################
 brew update; brew install carthage
 
+
+##########################################################################################
+# Install mergepbx - Merge tool to automatically merge project.pbx files after conflicts #
+##########################################################################################
+brew update; brew install mergepbx
+
 #####################
 # Install CocoaPods #
 #####################
