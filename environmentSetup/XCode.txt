@@ -51,15 +51,20 @@ https://developer.apple.com/downloads/index.action?q=Hardware%20IO%20Tools
 ###################
 # Xcode  Packages #
 ###################
+Auto-Importer                     # Quickly import your headers on the fly
+BBUDebuggerTuckAway               # Auto-hide the debugger once you start typing in the source code editor
+BBUFullIssueNavigator             # Show all issue content in the issue navigator
 BBUncrustifyPlugin                # Automatic code formatting
 CocoaPods                         # Package Manager
 CocoaPodsUI                       # UI for CocoaPods package manager
 FuzzyAutocomplete                 # Fuzzy autocomplete
+GitDiff		                      # Highlights differenceccs against git repo in Xcode source editor
 InjectionPlugin                   # Inject code into running applications
 KSImageNamed                      # Autocomplete for image names
 Lin                               # Autocomplete for NSLocalizedStrings
 QuickLocalization                 # Convert strings into localized strings
+XcodeColors                       # XcodeColors allows you to use colors in the Xcode debugging console.
+XInfer                            # Facebook Infer plugin for Xcode
 XToDo                             # Allows you to collect and list 'TODO', 'FIXME', '???', '!!!'
 XVim                              # Vim commands inside Xcode
-XcodeColors                       # XcodeColors allows you to use colors in the Xcode debugging console.
-
+XWJsonToCode                      # Helps you generate model properties and single call create file with json easier
