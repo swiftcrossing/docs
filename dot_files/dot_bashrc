@@ -14,6 +14,7 @@ export SVN_EDITOR=vim
 export EDITOR=vim
 export PATH=$PATH:/Users/renrawnalon/android-sdk-macosx/platform-tools/:/usr/bin/
 export PATH=$PATH:/Users/renrawnalon/android-sdk-macosx/platforms/:/usr/bin/
+export PATH=$HOME/infer-osx/infer/bin:$PATH
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 export PATH=$PATH:$HOME/.local/bin
 

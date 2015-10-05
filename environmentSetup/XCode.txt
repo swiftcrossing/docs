@@ -26,6 +26,32 @@ brew update; brew install -v --HEAD xctool
 ####################
 brew update; brew install carthage
 
+##################################################################
+# Install Infer - Source code static analysis tool from Facebook #
+##################################################################
+
+## Requirements
+#  Python 2.7
+#  opam (instructions below)
+#  Java <= 1.7 (only needed for the Java analysis)
+#  XCode <= 6.3, >= 6.1 (only needed for the C/Objective-C analysis)
+#  clang in XCode command line tools. You can install them with the command xcode-select --install (only needed for the C/Objective-C analysis)
+##
+
+## Install and setup Opam
+brew install opam  # Homebrew, OSX Mavericks or later
+opam init -y --comp=4.01.0
+eval `opam config env`
+opam install -y extlib.1.5.4 atdgen.1.6.0 javalib.2.3.1 sawja.1.5.1
+
+## Get the latest Infer release
+https://github.com/facebook/infer/releases
+
+## Compile and install Infer
+tar xf infer-*-v0.3.0.tar.xz
+cd infer-*-v0.3.0
+make -C infer
+export PATH=`pwd`/infer/bin:$PATH # Add this to .bashrc
 
 ##########################################################################################
 # Install mergepbx - Merge tool to automatically merge project.pbx files after conflicts #
