@@ -21,8 +21,14 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 ##################
 brew update; brew install -v --HEAD xctool
 
+#####################
+# Install CocoaPods #
+#####################
+sudo gem install cocoapods
+sudo gem install cocoapods-rome
+
 ####################
-# Install carthage #
+# Install Carthage #
 ####################
 brew update; brew install carthage
 
@@ -57,12 +63,6 @@ export PATH=`pwd`/infer/bin:$PATH # Add this to .bashrc
 # Install mergepbx - Merge tool to automatically merge project.pbx files after conflicts #
 ##########################################################################################
 brew update; brew install mergepbx
-
-#####################
-# Install CocoaPods #
-#####################
-sudo gem install cocoapods
-sudo gem install cocoapods-rome
 
 #####################################
 # Install Alcatraz - Plugin Manager #
