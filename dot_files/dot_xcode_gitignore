@@ -16,6 +16,10 @@ DerivedData
 .idea/
 *.hmap
 *.xccheckout
-
-#GPSPunch
-Documentation
+*~.nib
+!xcshareddata
+!xcschemes
+*Licenses.plist
+*.swp
+*.lock
+Pods 
