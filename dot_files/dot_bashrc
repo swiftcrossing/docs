@@ -55,7 +55,7 @@ alias vim='vim -p ' # make sure vim opens up tabs for multiple files
 
 # git Aliases
 alias ga='git add'
-alias gaa='git add -A'
+alias gaA='git add -A'
 alias gap='git add -p'
 alias gaproj='git aproj'
 alias gb='git branch'
@@ -101,6 +101,11 @@ function glga ()
 function glg ()
 {
 	ssh-gas -q ; git log --show-signature --graph --decorate --color "$@" | less -R
+}
+
+function gcm ()
+{
+	ssh-gas -q ; git commit -m "$*"
 }
 
 function gcam ()
