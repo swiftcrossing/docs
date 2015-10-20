@@ -104,6 +104,11 @@ function glg ()
 	ssh-gas -q ; git log --show-signature --graph --decorate --color "$@" | less -R
 }
 
+function garbc ()
+{
+	ssh-gas -q ; git add -A ; git rebase --continue
+}
+
 function gcm ()
 {
 	ssh-gas -q ; git commit -m "$*"
