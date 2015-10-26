@@ -34,6 +34,7 @@ filetype plugin on
 filetype indent on
 
 set smartindent
+set expandtab
 "set number
 set fileencodings=utf-8
 setglobal fileencoding=utf-8
