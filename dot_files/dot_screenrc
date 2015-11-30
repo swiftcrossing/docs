@@ -37,11 +37,14 @@ shelltitle " $ |bash"
 #shelltitle "$ |bash:"
 
 
+screen -t server_test 10
+screen -t st_server 9
+screen -t st_db 8
 screen 7
 screen 6
 screen 5
-screen 4
-screen 3
-screen 2
-screen 1
+screen -t "docs" 4 
+screen -t "playground" 3
+screen -t "second" 2
+screen -t "main" 1
 
