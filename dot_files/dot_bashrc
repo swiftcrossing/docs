@@ -12,11 +12,15 @@ export PROMPT_COMMAND='PS1X=$(p="${PWD#${HOME}}"; [ "${PWD}" != "${p}" ] && prin
 export PS1="$NO_COLOR\${PS1X}$YELLOW\$(parse_git_branch)$NO_COLOR\$ "
 export SVN_EDITOR=vim
 export EDITOR=vim
-export PATH=$PATH:/Users/renrawnalon/android-sdk-macosx/platform-tools/:/usr/bin/
+export PATH=$PATH:/Users/renrawnalon/android-sdk-macosx/platform-tools/
 export PATH=$PATH:/Users/renrawnalon/android-sdk-macosx/platforms/:/usr/bin/
-export PATH=$HOME/infer-osx/infer/bin:$PATH
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+export PATH=$PATH:$HOME/infer-osx/infer/bin
+export PATH=$PATH:/opt/local/bin:/opt/local/sbin
 export PATH=$PATH:$HOME/.local/bin
+
+# Setting PATH for Python 2.7
+# The orginal version is saved in .bash_profile.pysave
+export PATH=$PATH:/Library/Frameworks/Python.framework/Versions/2.7/bin
 
 # Unversioned aliases 
 if [ -f ~/.bash_aliases ];
@@ -24,11 +28,6 @@ then
 	echo 'Sourced .bash_aliases'
 	source ~/.bash_aliases
 fi
-
-# Setting PATH for Python 2.7
-# The orginal version is saved in .bash_profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
-export PATH
 
 # cd ../.. = cd ...
 # Source: http://www.commandlinefu.com/commands/view/3936
@@ -65,7 +64,6 @@ alias gaproj='git aproj'
 alias gb='git branch'
 alias gc='git commit'
 alias gca='git commit --amend'
-#alias gcm='git cm' # Rewritten as function
 alias gco='git checkout'
 alias gcp='git cherry-pick'
 alias gd='git diff'
