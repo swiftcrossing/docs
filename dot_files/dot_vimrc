@@ -1,6 +1,8 @@
 set nocompatible		" Explicitly turn off compatibility mode
 filetype off
 
+source ~/.vimrc_local
+
 if isdirectory(expand("~/.vim/bundle/neobundle/.git"))
 	set runtimepath+=~/.vim/bundle/neobundle/
 	call neobundle#rc(expand('~/.vim/bundle/'))
@@ -135,33 +137,3 @@ nnoremap <Leader>b :FufFile<CR>
 " in input mode, what about we try using jj as escape
 inoremap jj <Esc>
 
-function! MConst()
-	@m
-endfunction
-
-function! HConst()
-	@h
-endfunction
-
-function! AddComments()
-	@a
-endfunction
-
-function! Brackets()
-	@r
-endfunction
-
-let @a=":%s#^#\\r/\*\*\\r \*/\\r#\<C-m>"
-let @r=":%s/;/\\r{\\r}\\r/\<C-m>"
-let @x=":%s/:.*//g\<C-m>:%s/\"//g\<C-m>:%s/\\s//g\<C-m>"
-let @y=":%s/:.*//g\<C-m>:%s/\"//g\<C-m>:%s/\\s//g\<C-m>:%s#_\\([a-z]\\)#\\u\\1#g\<C-m>"
-let @z=":%s/-\\s\(//\<C-m>:%s/\*\)/\*/\<C-m>:%s/\)/ /\<C-m>:%s/;/ = [_paramDictionary nullObjectForKey:PARAM_RECEIVE_];\<C-m>"
-let @l=":%s#_\\([a-z]\\)#\\u\\1#g\<C-m>"
-let @c=":%s/:.*//g\<C-m>:%s/\"//g\<C-m>:%s#_\\([a-z]\\)#\\u\\1#g\<C-m>:%s/$/;/g\<C-m>:%s/\\s//g\<C-m>"
-let @m=":%s/:.*//g\<C-m>:%s/\"//g\<C-m>:%s/\\s//g\<C-m>:g/.*/t.|-j\<C-m>:%s/^\\(\\w*\\)/\\U\\1/\<C-m>:%s/\\s/ = @\"\<C-m>:%s/$/\";\<C-m>:%s/^/const NSString *PARAM_RECEIVE_/g\<C-m>"
-let @h=":%s/:.*//g\<C-m>:%s/\"//g\<C-m>:%s/\\s//g\<C-m>:%s/^\\(\\w*\\)/\\U\\1/\<C-m>:%s/$/\;\<C-m>:%s/^/extern const NSString *PARAM_RECEIVE_/g\<C-m>"
-let @i=":s/^/- \(int\)\<C-m>"
-let @f=":s/^/- \(CGFloat\)\<C-m>"
-let @s=":s/^/- \(NSString \*\)\<C-m>"
-let @b=":s/^/- \(BOOL\)\<C-m>"
-let @d=":%s#\\(.*\\)\\t\\(.*\\)\\t.*#\\1,\\2#\<C-m>"
