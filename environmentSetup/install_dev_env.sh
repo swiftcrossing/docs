@@ -58,6 +58,16 @@ main() {
         brew install tree
     }
 
+    # Install postgres
+    isInstalled postrges || {
+        brew install postrges
+    }
+
+    # Install Haskell
+    isInstalled stack || {
+        brew install haskell-stack
+    }
+
     # Install xctool
     isInstalled xctool || {
         brew install -v --HEAD xctool
