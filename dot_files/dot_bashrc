@@ -44,6 +44,10 @@ alias mkdir="mkdir -p"
 # just printing them to the screen
 alias less="less -R"
 
+alias tree="tree -NC -l"
+
+# Xcode Aliases
+alias purgeallbuilds='rm -rf ~/Library/Developer/Xcode/DerivedData/*'
 
 # vim Aliases
 alias bashrc="vim $HOME/.bashrc; if [ -f $HOME/.bash_profile ] ; then . $HOME/.bash_profile ; echo 'Sourced .bash_profile' ; else . $HOME/.bashrc ; echo 'Sourced .bashrc' ; fi"
@@ -80,7 +84,7 @@ alias grbi='git rebase -i'
 alias grbo='git rebase --onto'
 alias grhe='git reset HEAD'
 alias grha='git reset --hard'
-#alias gst='git stash' # Rewritten as function
+alias gst='git stash'
 
 # gitk Aliases
 alias gitk='gitk 2>/dev/null &'
@@ -107,6 +111,11 @@ function glg ()
 function garbc ()
 {
 	ssh-gas -q ; git add -A ; git rebase --continue
+}
+
+function gaca ()
+{
+	ssh-gas -q ; git add -A ; git commit --amend
 }
 
 function gcm ()
@@ -137,23 +146,6 @@ function gcamp ()
 function gcAmp ()
 {
 	ssh-gas -q ; git add -A ; git commit -m "$*" ; git push
-}
-
-function gst ()
-{
-	ssh-gas -q
-
-	# run git status
-	git status
-
-	# See if there are any uninitialized submodules.
-	git submodule status | cut -c1 | grep -- '-' &> /dev/null
-	local ret="$?"
-
-	if [ "$ret" = 0 ] ; then
-		echo
-		echo "Uninitialized submodules.  Run \`git submodule update --init\`"
-	fi
 }
 
 # SSH Get Auth Sock.
