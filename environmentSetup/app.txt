@@ -1,0 +1,11 @@
+1. Manually create AppID: com.example.myapp
+
+2. Create Distribution certificate
+
+    cert -u myusername@gmail.com -o ../
+
+3. Create Provisioning profile
+
+    sigh -a com.example.myapp -u myusername@gmail.com -o ../
+	
+4. 
