@@ -86,7 +86,9 @@
     FuzzyAutocomplete                 # Fuzzy autocomplete
     InjectionPlugin                   # Inject code into running applications
     KSImageNamed                      # Autocomplete for image names
+    KZLinkedConsole                   # Add links to source files in console logs
     Lin                               # Autocomplete for NSLocalizedStrings
+    MCLog                             # Filter log results with regex
     QuickLocalization                 # Convert strings into localized strings
     XcodeColors                       # XcodeColors allows you to use colors in the Xcode debugging console.
     XInfer                            # Facebook Infer plugin for Xcode
