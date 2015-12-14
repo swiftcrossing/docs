@@ -50,8 +50,9 @@ alias purgeallbuilds='rm -rf ~/Library/Developer/Xcode/DerivedData/*'
 
 # vim Aliases
 alias bashrc="vim $HOME/.bashrc; if [ -f $HOME/.bash_profile ] ; then . $HOME/.bash_profile ; echo 'Sourced .bash_profile' ; else . $HOME/.bashrc ; echo 'Sourced .bashrc' ; fi"
-alias bashaliases="vim $HOME/.bash_aliases; . $HOME/.bash_aliasees ; echo 'Sourced .bash_aliases' ;"
+alias bashaliases="vim $HOME/.bash_aliases; . $HOME/.bash_aliases ; echo 'Sourced .bash_aliases' ;"
 alias vimrc="vim $HOME/.vimrc"
+alias vimrclocal="vim $HOME/.vimrc_local"
 alias gitconfig="vim $HOME/.gitconfig"
 alias vimproj="echo $(git rev-parse --show-toplevel); vim  $(git rev-parse --show-toplevel)/*.xcodeproj/project.pbxproj"
 alias vim='vim -p ' # make sure vim opens up tabs for multiple files
