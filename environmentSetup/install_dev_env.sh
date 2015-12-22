@@ -73,6 +73,11 @@ main() {
         brew install -v --HEAD xctool
     }
 
+    # Install swiftlint
+    isInstalled swiftlint || {
+        brew install swiftlint
+    }
+
     # Install Carthage in not installed
     isInstalled carthage || {
         brew install carthage
