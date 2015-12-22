@@ -76,6 +76,15 @@ main() {
     # Install swiftlint
     isInstalled swiftlint || {
         brew install swiftlint
+        echo "Add this script to your Xcode project:"
+        echo ""
+        echo "#if command -v swiftlint >/dev/null ; then"
+        echo "#    swiftlint"
+        echo "#else"
+        echo "#    echo "SwiftLint does not exist, download from https://github.com/realm/SwiftLint""
+        echo "#    echo "or""
+        echo "#    echo "Run `brew install swiftlint`""
+        echo "#fi"
     }
 
     # Install Carthage in not installed
