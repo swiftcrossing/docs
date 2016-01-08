@@ -1,2 +1,5 @@
 command alias uikit expr @import UIKit
 command alias foundation expr @import Foundation
+command script import ~/Library/lldb/ignore_specified_objc_exceptions.py
+display @import UIKit
+target stop-hook add -o "target stop-hook disable"
