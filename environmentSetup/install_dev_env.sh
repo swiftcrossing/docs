@@ -63,6 +63,11 @@ main() {
         brew install postrges
     }
 
+    # Install swiftgen
+    isInstalled swiftgen || {
+        brew install swiftgen
+    }
+
     # Install Haskell
     isInstalled stack || {
         brew install haskell-stack
