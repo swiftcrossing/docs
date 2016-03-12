@@ -9,6 +9,15 @@ main() {
     echo "Checking for Homebrew updates..."
     brew update
 
+    # Install Pip 
+    isInstalled pip || {
+        echo "Install pip..."
+        sudo easy_install pip
+    }
+
+    echo "Checking for pip updates..."
+    sudo pip install --upgrade pip
+
     # Install git with gitk
     isInstalled gitk || {
         brew install git
@@ -58,9 +67,14 @@ main() {
         brew install tree
     }
 
+    # Install mitmproxy
+    isInstalled mitmproxy || {
+        sudo pip install mitmproxy
+    }
+
     # Install postgres
-    isInstalled postrges || {
-        brew install postrges
+    isInstalled postgres || {
+        brew install postgres
     }
 
     # Install swiftgen
