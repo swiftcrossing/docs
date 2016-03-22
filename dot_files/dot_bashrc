@@ -75,7 +75,6 @@ alias gfa='git fetch --all'
 alias gfp='git fetch -p'
 alias gl='git log'
 alias gmnf='git merge --no-ff'
-alias gs='git status'
 alias grb='git rebase'
 alias grba='git rebase --abort'
 alias grbc='git rebase --continue'
@@ -145,6 +144,23 @@ function gcamp ()
 function gcAmp ()
 {
 	ssh-gas -q ; git add -A ; git commit -m "$*" ; git push
+}
+
+function gs ()
+{
+    ssh-gas -q
+
+    # run git status
+    git status
+
+    # See if there are any uninitialized submodules.
+    git submodule status | cut -c1 | grep -- '-' &> /dev/null
+    local ret="$?"
+
+    if [ "$ret" = 0 ] ; then
+        echo
+        echo "Uninitialized submodules.  Run \`git submodule update --init\`"
+    fi
 }
 
 # SSH Get Auth Sock.
