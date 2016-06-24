@@ -80,6 +80,11 @@ main() {
     }
 
     # Install tree
+    isInstalled hub || {
+        brew install hub
+    }
+
+    # Install tree
     isInstalled tree || {
         brew install tree
     }
