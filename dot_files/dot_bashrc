@@ -103,7 +103,7 @@ function glga ()
 
 function glg ()
 {
-	ssh-gas -q ; git log --show-signature --graph --decorate --color "$@" | less -R
+	ssh-gas -q ; git log --show-signature --graph --branches --tags --remotes --decorate --color "$@" --date-order | less -R
 }
 
 function garbc ()
