@@ -30,6 +30,12 @@ endif
 
 call plug#begin('~/.vim/plugged')
 Plug 'keith/swift.vim'
+Plug 'gfontenot/vim-xcode'
+Plug 'landaire/deoplete-swift'
+Plug 'mitsuse/autocomplete-swift'
+Plug 'Shougo/neocomplete.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'ctrlpvim/ctrlp.vim'
 call plug#end()
 
 filetype plugin on
