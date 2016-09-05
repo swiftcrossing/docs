@@ -48,6 +48,19 @@ main() {
         echo "Exiting prematurely!!! Setup did not complete!!!"
         exit 1
     }
+
+
+    # Install sourcekitten
+    isInstalled sourcekitten || {
+        brew install sourcekitten
+    }
+
+    # Install Plug - Vim plugin Manager
+    if [ -f "$HOME/.vim/autoload/plug.vim" ]; then
+        echo "[Plug] is already installed"
+    else
+        curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    fi
     
     # Install Alcatraz - Plugin Manager
     if [ -d "$HOME/Library/Application Support/Developer/Shared/Xcode/Plug-ins/Alcatraz.xcplugin/" ]; then
