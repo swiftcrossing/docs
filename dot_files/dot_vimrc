@@ -36,14 +36,36 @@ Plug 'mitsuse/autocomplete-swift'
 Plug 'Shougo/neocomplete.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'scrooloose/syntastic'
+Plug 'scrooloose/nerdcommenter'
 call plug#end()
 
 filetype plugin on
 filetype indent on
 
+" Swift development settings
+autocmd VimEnter * NeoCompleteEnable
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+" let g:syntastic_swift_checkers = ['swiftpm']
+" let g:syntastic_swift_checkers = ['swiftlint']
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
+
+let g:xcode_default_simulator = 'iPhone 6s'
+
+let g:NERDSpaceDelims = 1 " Add spaces after comment delimiters by default
+let g:NERDCompactSexyComs = 1 " Use compact syntax for prettified multi-line comments
+let g:NERDCommentEmptyLines = 1 " Allow commenting and inverting empty lines (useful when commenting a region)
+
+" Genral vim settings
 set smartindent
 set expandtab
-"set number
+set number
 set fileencodings=utf-8
 setglobal fileencoding=utf-8
 set encoding=utf-8
@@ -142,4 +164,7 @@ nnoremap <Leader>b :FufFile<CR>
 
 " in input mode, what about we try using jj as escape
 inoremap jj <Esc>
+
+" Jump to the first placeholder by typing `<C-k>`.
+" autocmd FileType swift imap <buffer> <C-k> <Plug>(autocomplete_swift_jump_to_placeholder)
 
