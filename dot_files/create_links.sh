@@ -51,7 +51,7 @@ super_link $HOME/docs/dot_files/dot_xvimrc $HOME/.xvimrc
 super_link $HOME/docs/dot_files/dot_lldbinit $HOME/.lldbinit
 
 # gitk files
-super_link $HOME/docs/dot_files/dot_gitk $HOME/.gitk
+# super_link $HOME/docs/dot_files/dot_gitk $HOME/.gitk
 
 # git bash completion files
 super_link $HOME/docs/dot_files/dot_git-completion.bash $HOME/.git-completion.bash
