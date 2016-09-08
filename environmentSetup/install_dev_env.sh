@@ -80,6 +80,11 @@ main() {
         brew install tree
     }
 
+    # Install tree
+    isInstalled ctags || {
+        brew install ctags
+    }
+
     # Install mitmproxy
     isInstalled mitmproxy || {
         sudo pip install mitmproxy

@@ -57,6 +57,9 @@ alias gitconfig="vim $HOME/.gitconfig"
 alias vimproj="echo $(git rev-parse --show-toplevel); vim  $(git rev-parse --show-toplevel)/*.xcodeproj/project.pbxproj"
 alias vim='vim -p ' # make sure vim opens up tabs for multiple files
 
+# ctags Aliases
+alias ctags="`brew --prefix`/bin/ctags"
+
 # git Aliases
 alias ga='git add'
 alias gaA='git add -A'
