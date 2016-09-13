@@ -59,6 +59,7 @@ alias vim='vim -p ' # make sure vim opens up tabs for multiple files
 
 # ctags Aliases
 alias ctags="`brew --prefix`/bin/ctags"
+alias ctagsgen='ctags -R -f ./.git/tags .'
 
 # git Aliases
 alias ga='git add'

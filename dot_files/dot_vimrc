@@ -62,7 +62,11 @@ let g:NERDSpaceDelims = 1 " Add spaces after comment delimiters by default
 let g:NERDCompactSexyComs = 1 " Use compact syntax for prettified multi-line comments
 let g:NERDCommentEmptyLines = 1 " Allow commenting and inverting empty lines (useful when commenting a region)
 
-" Genral vim settings
+" ctags settings
+set tags=tags;/
+let tlist_objc_settings = 'ObjectiveC;P:protocols;i:interfaces;types(...)'
+
+" General vim settings
 set smartindent
 set expandtab
 set number
