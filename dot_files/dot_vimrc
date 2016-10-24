@@ -70,6 +70,7 @@ let tlist_objc_settings = 'ObjectiveC;P:protocols;i:interfaces;types(...)'
 set smartindent
 set expandtab
 set number
+set relativenumber
 set fileencodings=utf-8
 setglobal fileencoding=utf-8
 set encoding=utf-8
