@@ -42,6 +42,9 @@ super_link $HOME/docs/dot_files/dot_ctags $HOME/.ctags
 # screenrc files
 super_link $HOME/docs/dot_files/dot_screenrc $HOME/.screenrc
 
+# tmux.conf files
+super_link $HOME/docs/dot_files/dot_tmux.conf $HOME/.tmux.conf
+
 # gitconfig files
 super_link $HOME/docs/dot_files/dot_gitconfig $HOME/.gitconfig
 
