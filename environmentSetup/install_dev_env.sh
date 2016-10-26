@@ -49,7 +49,6 @@ main() {
         exit 1
     }
 
-
     # Install sourcekitten
     isInstalled sourcekitten || {
         brew install sourcekitten
@@ -75,12 +74,17 @@ main() {
     #rm -rf ~/Library/Application\ Support/Alcatraz                                          #
     ##########################################################################################
 
+    # Install tmux 
+    isInstalled tmux || {
+        brew install tmux
+    }
+
     # Install tree
     isInstalled tree || {
         brew install tree
     }
 
-    # Install tree
+    # Install ctags
     isInstalled ctags || {
         brew install ctags
     }
