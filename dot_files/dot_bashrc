@@ -94,6 +94,30 @@ alias gitk='gitk 2>/dev/null &'
 # screen Aliases
 alias screen='screen -R'
 
+# tmux Startup function
+function tmx()
+{
+    if tmux attach ;
+    then
+        return
+    fi
+
+    if tmux has-session -t 'sess' ;
+    then
+        return
+    fi
+
+    tmux new-session -n 'main' -s 'sess' -d
+    tmux new-window -n 'docs'
+    tmux new-window -n ''
+    tmux new-window -n ''
+    tmux new-window -n ''
+    tmux new-window -n ''
+    tmux select-window -t 'main'
+    tmux attach-session -d
+}
+
+
 # puppie Aliases
 alias pshow='LC_ALL=C gpg -d ~/cute_puppies/cute_puppies.gpg'
 alias pedit='LC_ALL=C ~/docs/vigpg ~/cute_puppies/cute_puppies.gpg'
