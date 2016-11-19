@@ -45,6 +45,9 @@ super_link $HOME/docs/dot_files/dot_screenrc $HOME/.screenrc
 # tmux.conf files
 super_link $HOME/docs/dot_files/dot_tmux.conf $HOME/.tmux.conf
 
+# inputrc files
+super_link $HOME/docs/dot_files/dot_inputrc $HOME/.inputrc
+
 # gitconfig files
 super_link $HOME/docs/dot_files/dot_gitconfig $HOME/.gitconfig
 
