@@ -167,8 +167,11 @@ nnoremap <Leader>m :NERDTreeToggle<CR>
 " File search on FuzzySearch
 nnoremap <Leader>b :FufFile<CR>
 
-" in input mode, what about we try using jj as escape
+" in input mode, use combinations of j and k as escape
 inoremap jj <Esc>
+inoremap kk <Esc>
+inoremap jk <Esc>
+inoremap kj <Esc>
 
 " Jump to the first placeholder by typing `<C-k>`.
 " autocmd FileType swift imap <buffer> <C-k> <Plug>(autocomplete_swift_jump_to_placeholder)
