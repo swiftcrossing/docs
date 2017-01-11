@@ -78,4 +78,4 @@ nnoremap <C-h> gT
 nnoremap <C-l> gt
 
 " in input mode, what about we try using jj as escape
-" inoremap jj <Esc>
+inoremap jj <Esc>
