@@ -47,7 +47,7 @@ done
 make_directory $HOME/Library/Developer/Xcode/UserData/FontAndColorThemes/
 docspath=$HOME/docs/XcodeSetupFiles/FontAndColorThemes/
 linkpath=$HOME/Library/Developer/Xcode/UserData/FontAndColorThemes/
-for filename in $docspath*.dvtcolortheme; do
+for filename in $docspath*.xccolortheme; do
 	super_link $filename $linkpath${filename#$docspath}
 done
 
