@@ -6,16 +6,16 @@ main() {
         ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     }
 
-    echo "Checking for Homebrew updates..."
+    echo 'Checking for Homebrew updates...'
     brew update
 
     # Install Pip 
     isInstalled pip || {
-        echo "Install pip..."
+        echo 'Install pip...'
         sudo easy_install pip
     }
 
-    echo "Checking for pip updates..."
+    echo 'Checking for pip updates...'
     sudo pip install --upgrade pip
 
     # Install git with gitk
@@ -24,28 +24,29 @@ main() {
 
         # Check to make sure that install path is correct
         if ! [ $(command -v git) == "/usr/local/bin/git" ]; then
-            echo "[git] is not installed at /usr/local/bin/git"
-            echo "Attempting to fix this by running \$brew doctor"
+            echo '[git] is not installed at /usr/local/bin/git'
+            echo 'Attempting to fix this by running $brew doctor'
 
             # If not correct path, run:
             brew doctor
-            echo "Exiting prematurely!!! Setup did not complete!!!"
+            echo 'Exiting prematurely!!! Setup did not complete!!!'
         fi
     }
 
     # Check if Xcode is installed
     if xcode-select -p >/dev/null ; then
-        echo "[Xcode] is already installed"
+        echo '[Xcode] is already installed'
     else
-        echo "Install Xcode!!!"
-        echo "Exiting prematurely!!! Setup did not complete!!!"
+        echo 'Install Xcode!!!'
+        echo 'Then run `xcode-select --install` to install command line tools!!!'
+        echo 'Exiting prematurely!!! Setup did not complete!!!'
         exit 1
     fi
 
     # Install RubyGems
     isInstalled gem || {
-        echo "Check out Xcode.txt for installation instructions..."
-        echo "Exiting prematurely!!! Setup did not complete!!!"
+        echo 'Check out Xcode.txt for installation instructions...'
+        echo 'Exiting prematurely!!! Setup did not complete!!!'
         exit 1
     }
 
@@ -54,16 +55,27 @@ main() {
         brew install sourcekitten
     }
 
+    # Install rbenv
+    isInstalled rbenv || {
+        brew install rbenv ruby-build
+        ruby_version=`egrep "^\s+2\.\d+\.\d+$" <(rbenv install -l) | tail -1`
+        echo "Installing ruby version: $ruby_version"
+        rbenv install $ruby_version
+        rbenv global $ruby_version
+        rbenv rehash
+        source ~/.bash_profile
+    }
+
     # Install Plug - Vim plugin Manager
     if [ -f "$HOME/.vim/autoload/plug.vim" ]; then
-        echo "[Plug] is already installed"
+        echo '[Plug] is already installed'
     else
         curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     fi
     
     # Install Alcatraz - Plugin Manager
     if [ -d "$HOME/Library/Application Support/Developer/Shared/Xcode/Plug-ins/Alcatraz.xcplugin/" ]; then
-        echo "[Alcatraz] is already installed"
+        echo '[Alcatraz] is already installed'
     else
         curl -fsSL https://raw.githubusercontent.com/supermarin/Alcatraz/master/Scripts/install.sh | sh
     fi
@@ -79,7 +91,7 @@ main() {
         brew install tmux
     }
 
-    # Install tree
+    # Install hub
     isInstalled hub || {
         brew install hub
     }
@@ -105,9 +117,9 @@ main() {
     }
 
     # Install swiftgen
-    isInstalled swiftgen || {
-        brew install swiftgen
-    }
+    # isInstalled swiftgen || {
+    #     brew install swiftgen
+    # }
 
     # Install Haskell
     isInstalled stack || {
@@ -115,22 +127,22 @@ main() {
     }
 
     # Install xctool
-    isInstalled xctool || {
-        brew install -v --HEAD xctool
-    }
+    # isInstalled xctool || {
+    #     brew install -v --HEAD xctool
+    # }
 
     # Install swiftlint
     isInstalled swiftlint || {
         brew install swiftlint
-        echo "Add this script to your Xcode project:"
-        echo ""
-        echo "#if command -v swiftlint >/dev/null ; then"
-        echo "#    swiftlint"
-        echo "#else"
-        echo "#    echo "SwiftLint does not exist, download from https://github.com/realm/SwiftLint""
-        echo "#    echo "or""
-        echo "#    echo "Run `brew install swiftlint`""
-        echo "#fi"
+        echo 'Add this script to your Xcode project:'
+        echo ''
+        echo '#if command -v swiftlint >/dev/null ; then'
+        echo '#    swiftlint'
+        echo '#else'
+        echo '#    echo "SwiftLint does not exist, download from https://github.com/realm/SwiftLint"'
+        echo '#    echo "or"'
+        echo '#    echo "Run `brew install swiftlint`"'
+        echo '#fi'
     }
 
     # Install Carthage in not installed
@@ -140,7 +152,12 @@ main() {
 
     # Install CocoaPods
     isInstalled pod || {
-        sudo gem install cocoapods
+        gem install cocoapods
+    }
+
+    # Install Bundler
+    isInstalled bundle || {
+        gem install bundler
     }
 
     # Install mergepbx - Merge tool to automatically merge project.pbx files after conflicts

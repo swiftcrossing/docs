@@ -22,6 +22,16 @@ export PATH=$PATH:$HOME/.local/bin
 # The orginal version is saved in .bash_profile.pysave
 export PATH=$PATH:/Library/Frameworks/Python.framework/Versions/2.7/bin
 
+# Setup Ruby environment
+if which rbenv > /dev/null;
+    then eval "$(rbenv init -)";
+fi
+export PATH="$HOME/.rbenv/bin:$PATH"
+
+#Setup Cocoapods to install locally
+export GEM_HOME=$HOME/.gem
+export PATH=$GEM_HOME/bin:$PATH
+
 # Unversioned aliases 
 if [ -f ~/.bash_aliases ];
 then
