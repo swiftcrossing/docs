@@ -17,6 +17,7 @@ export PATH=$PATH:/Users/renrawnalon/android-sdk-macosx/platforms/:/usr/bin/
 export PATH=$PATH:$HOME/infer-osx/infer/bin
 export PATH=$PATH:/opt/local/bin:/opt/local/sbin
 export PATH=$PATH:$HOME/.local/bin
+export PATH="$HOME/.fastlane/bin:$PATH"
 
 # Setting PATH for Python 2.7
 # The orginal version is saved in .bash_profile.pysave

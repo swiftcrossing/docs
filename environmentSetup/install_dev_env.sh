@@ -12,11 +12,11 @@ main() {
     # Install Pip 
     isInstalled pip || {
         echo 'Install pip...'
-        sudo easy_install pip
+        easy_install pip
     }
 
     echo 'Checking for pip updates...'
-    sudo pip install --upgrade pip
+    pip install --upgrade pip
 
     # Install git with gitk
     isInstalled gitk || {
@@ -108,7 +108,7 @@ main() {
 
     # Install mitmproxy
     isInstalled mitmproxy || {
-        sudo pip install mitmproxy
+        sudo -H pip install mitmproxy --upgrade --ignore-installed six
     }
 
     # Install postgres
@@ -124,6 +124,11 @@ main() {
     # Install Haskell
     isInstalled stack || {
         brew install haskell-stack
+    }
+
+    # Install Fastlane
+    isInstalled fastlane || {
+        brew cask install fastlane
     }
 
     # Install xctool
