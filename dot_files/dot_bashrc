@@ -105,6 +105,9 @@ alias gitk='gitk 2>/dev/null &'
 # Bundle Aliases
 alias bepi='bundle exec pod install'
 alias bepru='bundle exec pod repo update'
+alias be='bundle exec'
+alias bef='bundle exec fastlane'
+alias bep='bundle exec pod'
 
 # screen Aliases
 alias screen='screen -R'
