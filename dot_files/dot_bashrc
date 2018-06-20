@@ -125,20 +125,17 @@ function tmx()
         return
     fi
 
-    tmux new-session -n 'main' -s 'sess' -d
-    tmux new-window -n 'docs'
-    tmux new-window -n ''
-    tmux new-window -n ''
-    tmux new-window -n ''
-    tmux new-window -n ''
-    tmux select-window -t 'main'
+    tmux new-session -n 'man' -s 'sess' -d
+    tmux new-window -n 'manserve'
+    tmux new-window -n 'mandev'
+    tmux new-window -n 'lab'
+    tmux new-window -n 'labserve'
+    tmux new-window -n 'labdev'
+    tmux new-window -n 'vpn'
+    tmux select-window -t 'man'
     tmux attach-session -d
 }
 
-
-# puppie Aliases
-alias pshow='LC_ALL=C gpg -d ~/cute_puppies/cute_puppies.gpg'
-alias pedit='LC_ALL=C ~/docs/vigpg ~/cute_puppies/cute_puppies.gpg'
 
 # git helper functions
 
