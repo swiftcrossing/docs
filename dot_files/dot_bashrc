@@ -254,3 +254,8 @@ function ssh-gas ()
 	[ "$VERBOSE" ] && echo "using auth sock: $auth_sock"
 	export SSH_AUTH_SOCK="$auth_sock"
 }
+
+function rename ()
+{
+    for f in $1*; do mv "$f" $(echo "$f" | sed "s/^$1/$2/g"); done
+}
