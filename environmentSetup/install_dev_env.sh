@@ -86,90 +86,31 @@ main() {
     #rm -rf ~/Library/Application\ Support/Alcatraz                                          #
     ##########################################################################################
 
-    # Install tmux 
-    isInstalled tmux || {
-        brew install tmux
-    }
-
-    # Install hub
-    isInstalled hub || {
-        brew install hub
-    }
-
-    # Install tree
-    isInstalled tree || {
-        brew install tree
-    }
-
-    # Install ctags
-    isInstalled ctags || {
-        brew install ctags
-    }
-
-    # Install mitmproxy
-    isInstalled mitmproxy || {
-        sudo -H pip install mitmproxy --upgrade --ignore-installed six
-    }
-
-    # Install postgres
-    isInstalled postgres || {
-        brew install postgres
-    }
-
-    # Install swiftgen
-    # isInstalled swiftgen || {
-    #     brew install swiftgen
+    isInstalled tmux || { brew install tmux }
+    isInstalled tree || { brew install tree }
+    # isInstalled hub || { brew install hub }
+    # isInstalled ctags || { brew install ctags }
+    # isInstalled mitmproxy || { sudo -H pip install mitmproxy --upgrade --ignore-installed six }
+    # isInstalled postgres || { brew install postgres }
+    # isInstalled swiftgen || { brew install swiftgen }
+    # isInstalled stack || { brew install haskell-stack }
+    # isInstalled fastlane || { brew cask install fastlane }
+    # isInstalled xctool || { brew install -v --HEAD xctool }
+    # isInstalled carthage || { brew install carthage }
+    # isInstalled pod || { gem install cocoapods }
+    # isInstalled bundle || { gem install bundler }
+    # isInstalled swiftlint || {
+    #     brew install swiftlint
+    #     echo 'Add this script to your Xcode project:'
+    #     echo ''
+    #     echo '#if command -v swiftlint >/dev/null ; then'
+    #     echo '#    swiftlint'
+    #     echo '#else'
+    #     echo '#    echo "SwiftLint does not exist, download from https://github.com/realm/SwiftLint"'
+    #     echo '#    echo "or"'
+    #     echo '#    echo "Run `brew install swiftlint`"'
+    #     echo '#fi'
     # }
-
-    # Install Haskell
-    isInstalled stack || {
-        brew install haskell-stack
-    }
-
-    # Install Fastlane
-    isInstalled fastlane || {
-        brew cask install fastlane
-    }
-
-    # Install xctool
-    # isInstalled xctool || {
-    #     brew install -v --HEAD xctool
-    # }
-
-    # Install swiftlint
-    isInstalled swiftlint || {
-        brew install swiftlint
-        echo 'Add this script to your Xcode project:'
-        echo ''
-        echo '#if command -v swiftlint >/dev/null ; then'
-        echo '#    swiftlint'
-        echo '#else'
-        echo '#    echo "SwiftLint does not exist, download from https://github.com/realm/SwiftLint"'
-        echo '#    echo "or"'
-        echo '#    echo "Run `brew install swiftlint`"'
-        echo '#fi'
-    }
-
-    # Install Carthage in not installed
-    isInstalled carthage || {
-        brew install carthage
-    }
-
-    # Install CocoaPods
-    isInstalled pod || {
-        gem install cocoapods
-    }
-
-    # Install Bundler
-    isInstalled bundle || {
-        gem install bundler
-    }
-
-    # Install mergepbx - Merge tool to automatically merge project.pbx files after conflicts
-    isInstalled mergepbx || {
-        brew install mergepbx
-    }
-
 }
 
 # Check if already installed
