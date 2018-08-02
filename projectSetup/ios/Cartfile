@@ -1,0 +1,36 @@
+github "mac-cain13/R.swift.Library" ~> 4.0
+
+## Add if required
+# github "ReactiveX/RxSwift" ~> 4.0
+
+## Libraries to look into
+# github "antitypical/Result" ~> 3.2
+# github "Carthage/ReactiveTask" ~> 0.14
+# github "Carthage/Commandant" ~> 0.14
+# github "jdhealy/PrettyColors" ~> 5.0
+# github "ReactiveCocoa/ReactiveSwift" ~> 3.1
+# github "mdiep/Tentacle" ~> 0.11
+# github "thoughtbot/Curry" ~> 4.0
+
+## Potential pods to look into
+# pod 'FLEX', :configurations => ['Debug', 'Internal']
+# pod 'Argo'
+# pod 'Curry'
+# pod 'R.swift'
+# pod 'Moya',               '~> 8.0'
+# pod 'RxSwift',              '~> 4.0'
+# pod 'RxCocoa',              '~> 4.0'
+# pod 'RxSwiftExt'
+# pod 'RxDataSources'
+# pod 'Moya/RxSwift'
+# pod 'NSObject+Rx',          '~> 4.0'
+# pod 'Action'
+# pod 'SwiftyUserDefaults'
+# pod 'Alamofire',          '~> 4.0'
+# pod 'AlamofireImage'
+# pod 'Kanna',              '~> 2.0'
+# pod 'SwiftLint'
+# pod 'ReactiveReSwift'
+# pod 'ReSwift',              '~> 4.0'
+# pod 'Shallows',             '~> 0.9'
+# pod 'XCGLogger',            '~> 6.0'

@@ -1,0 +1,42 @@
+platform :ios, '11.0'
+
+inhibit_all_warnings!
+use_frameworks!
+
+target 'ProjectName' do
+  pod 'R.swift',              '~> 4.0'
+  pod 'RxSwift',              '~> 4.0'
+  pod 'RxCocoa',              '~> 4.0'
+  pod 'NSObject+Rx',          '~> 4.0'
+  pod 'XCGLogger',            '~> 6.0'
+  pod 'SwiftLint'
+end
+
+post_install do |installer_representation|
+  require 'fileutils'
+  FileUtils.cp_r(Dir.glob("Pods/**/Pods-ProjectName-acknowledgements.plist")[0], 'ProjectName/SupportingFiles/Settings.bundle/Licenses.plist', :remove_destination => true)
+  installer_representation.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['ONLY_ACTIVE_ARCH'] = 'NO'
+      config.build_settings['GCC_WARN_INHIBIT_ALL_WARNINGS'] = 'YES'
+    end
+  end
+end
+
+pre_install do |installer_representation|
+  license_check = true
+  installer_representation.aggregate_targets.each do |aggregate_target|
+    aggregate_target.specs.each do |spec|
+      unless spec.license.empty? || /ISC|MIT|BSD|Copyright|Apache/i =~ spec.license[:type]
+        puts "######## License Error ########"
+        puts "Target Name : #{spec.name}"
+        puts "License Type : #{spec.license[:type]}"
+        license_check = false
+      end
+    end
+  end
+  unless license_check
+    exit
+  end
+end
+
