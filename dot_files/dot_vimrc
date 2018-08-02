@@ -82,13 +82,13 @@ set ttymouse=xterm2		" mouse scrolling in vim
 set mouse=a
 set foldenable
 set background=dark
-set tabstop=4			" 4-space tab indent width
-set shiftwidth=4		" allows you to use < and > to indent/unindent blocks
-set softtabstop=4		" see multiple space characters as a tab
-set shiftround			" Indent to nearest tab stop
-set autoindent			" carries over previous indent to the next line
-set smarttab			" A tab infront of a line inserts spaces or tabs according to expandtab
-set pastetoggle=<F2>		" Toggle set paste
+set tabstop=2         " 2-space tab indent width
+set shiftwidth=2      " allows you to use < and > to indent/unindent blocks
+set softtabstop=2     " see multiple space characters as a tab
+set shiftround        " Indent to nearest tab stop
+set autoindent        " carries over previous indent to the next line
+set smarttab          " A tab infront of a line inserts spaces or tabs according to expandtab
+set pastetoggle=<F2>  " Toggle set paste
 
 " Tell vim to remember certain things when we exit
 "  '100 : marks will be remembered for up to 100 previously edited files
