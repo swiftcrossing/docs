@@ -1,22 +1,25 @@
 github "mac-cain13/R.swift.Library" ~> 4.0
 
 ## Add if required
+# github "NSHipster/PasswordRules" ~> 1.0.0
+# github "antitypical/Result" ~> 3.2
+# github "ReactiveCocoa/ReactiveSwift" ~> 4.0
+# github "ReactiveCocoa/ReactiveCocoa" ~> 8.0
 # github "ReactiveX/RxSwift" ~> 4.0
+# github "Moya/Moya"
 
 ## Libraries to look into
-# github "antitypical/Result" ~> 3.2
 # github "Carthage/ReactiveTask" ~> 0.14
 # github "Carthage/Commandant" ~> 0.14
 # github "jdhealy/PrettyColors" ~> 5.0
-# github "ReactiveCocoa/ReactiveSwift" ~> 3.1
 # github "mdiep/Tentacle" ~> 0.11
 # github "thoughtbot/Curry" ~> 4.0
+
 
 ## Potential pods to look into
 # pod 'FLEX', :configurations => ['Debug', 'Internal']
 # pod 'Argo'
 # pod 'Curry'
-# pod 'R.swift'
 # pod 'Moya',               '~> 8.0'
 # pod 'RxSwift',              '~> 4.0'
 # pod 'RxCocoa',              '~> 4.0'
