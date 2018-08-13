@@ -90,6 +90,7 @@ main() {
     isInstalled tree || { brew install tree }
     isInstalled mint || { brew install mint }
     isInstalled fzy || { brew install fzy }
+    isInstalled ag || { brew install the_silver_searcher }
     # isInstalled hub || { brew install hub }
     # isInstalled ctags || { brew install ctags }
     # isInstalled mitmproxy || { sudo -H pip install mitmproxy --upgrade --ignore-installed six }
