@@ -89,6 +89,7 @@ main() {
     isInstalled tmux || { brew install tmux }
     isInstalled tree || { brew install tree }
     isInstalled mint || { brew install mint }
+    isInstalled fzy || { brew install fzy }
     # isInstalled hub || { brew install hub }
     # isInstalled ctags || { brew install ctags }
     # isInstalled mitmproxy || { sudo -H pip install mitmproxy --upgrade --ignore-installed six }
