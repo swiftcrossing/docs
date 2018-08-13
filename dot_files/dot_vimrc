@@ -173,6 +173,9 @@ inoremap kj <Esc>
 
 " Jump to the first placeholder by typing `<C-k>`.
 " autocmd FileType swift imap <buffer> <C-k> <Plug>(autocomplete_swift_jump_to_placeholder)
+"
+
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
 " Jump to current file in tree
 nnoremap <Leader>n :NERDTreeFind<CR>
