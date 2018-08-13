@@ -100,6 +100,7 @@ main() {
     # isInstalled carthage || { brew install carthage }
     # isInstalled pod || { gem install cocoapods }
     # isInstalled bundle || { gem install bundler }
+    # isInstalled xcversion || { gem install xcode-install }
     # isInstalled swiftlint || {
     #     brew install swiftlint
     #     echo 'Add this script to your Xcode project:'
