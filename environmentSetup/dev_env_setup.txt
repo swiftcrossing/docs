@@ -24,6 +24,12 @@
 
     https://justgetflux.com
 
+######################
+# Install MenuMeters #
+######################
+
+    https://member.ipmu.jp/yuji.tachikawa/MenuMetersElCapitan/
+
 ####################
 # Install vim-plug #
 ####################
