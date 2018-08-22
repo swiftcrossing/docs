@@ -50,11 +50,6 @@ main() {
         exit 1
     }
 
-    # Install sourcekitten
-    isInstalled sourcekitten || {
-        brew install sourcekitten
-    }
-
     # Install rbenv
     isInstalled rbenv || {
         brew install rbenv ruby-build
@@ -74,11 +69,11 @@ main() {
     fi
     
     # Install Alcatraz - Plugin Manager
-    if [ -d "$HOME/Library/Application Support/Developer/Shared/Xcode/Plug-ins/Alcatraz.xcplugin/" ]; then
-        echo '[Alcatraz] is already installed'
-    else
-        curl -fsSL https://raw.githubusercontent.com/supermarin/Alcatraz/master/Scripts/install.sh | sh
-    fi
+    # if [ -d "$HOME/Library/Application Support/Developer/Shared/Xcode/Plug-ins/Alcatraz.xcplugin/" ]; then
+    #     echo '[Alcatraz] is already installed'
+    # else
+    #     curl -fsSL https://raw.githubusercontent.com/supermarin/Alcatraz/master/Scripts/install.sh | sh
+    # fi
     ##########################################################################################
     # Uninstall Alcatraz                                                                     #
     #rm -rf ~/Library/Application\ Support/Developer/Shared/Xcode/Plug-ins/Alcatraz.xcplugin #
@@ -91,6 +86,9 @@ main() {
     isInstalled mint || { brew install mint }
     isInstalled fzy || { brew install fzy }
     isInstalled ag || { brew install the_silver_searcher }
+    isInstalled pod || { gem install cocoapods }
+    isInstalled bundle || { gem install bundler }
+    # isInstalled sourcekitten || { brew install sourcekitten }
     # isInstalled hub || { brew install hub }
     # isInstalled ctags || { brew install ctags }
     # isInstalled mitmproxy || { sudo -H pip install mitmproxy --upgrade --ignore-installed six }
@@ -100,8 +98,6 @@ main() {
     # isInstalled fastlane || { brew cask install fastlane }
     # isInstalled xctool || { brew install -v --HEAD xctool }
     # isInstalled carthage || { brew install carthage }
-    # isInstalled pod || { gem install cocoapods }
-    # isInstalled bundle || { gem install bundler }
     # isInstalled xcversion || { gem install xcode-install }
     # isInstalled swiftlint || {
     #     brew install swiftlint
