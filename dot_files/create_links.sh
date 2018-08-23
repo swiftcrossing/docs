@@ -67,6 +67,7 @@ super_link $HOME/docs/dot_files/dot_git-completion.bash $HOME/.git-completion.ba
 #super_link $HOME/docs/dot_files/dot_ssh_config $HOME/.ssh/config
 
 # vim files
+touch $HOME/.vimrc_local 
 super_link $HOME/docs/dot_files/dot_vimrc $HOME/.vimrc
 make_directory $HOME/.vim
 
