@@ -50,16 +50,16 @@ main() {
         exit 1
     }
 
-    # Install rbenv
-    isInstalled rbenv || {
-        brew install rbenv ruby-build
-        ruby_version=`egrep "^\s+2\.\d+\.\d+$" <(rbenv install -l) | tail -1`
-        echo "Installing ruby version: $ruby_version"
-        rbenv install $ruby_version
-        rbenv global $ruby_version
-        rbenv rehash
-        source ~/.bash_profile
-    }
+#   # Install rbenv
+#   isInstalled rbenv || {
+#       brew install rbenv ruby-build
+#       ruby_version=`egrep "^\s+2\.\d+\.\d+$" <(rbenv install -l) | tail -1`
+#       echo "Installing ruby version: $ruby_version"
+#       rbenv install $ruby_version
+#       rbenv global $ruby_version
+#       rbenv rehash
+#       source ~/.bash_profile
+#   }
 
     # Install Plug - Vim plugin Manager
     if [ -f "$HOME/.vim/autoload/plug.vim" ]; then
@@ -81,13 +81,25 @@ main() {
     #rm -rf ~/Library/Application\ Support/Alcatraz                                          #
     ##########################################################################################
 
-    isInstalled tmux || { brew install tmux }
-    isInstalled tree || { brew install tree }
-    isInstalled mint || { brew install mint }
-    isInstalled fzy || { brew install fzy }
-    isInstalled ag || { brew install the_silver_searcher }
-    isInstalled pod || { gem install cocoapods }
-    isInstalled bundle || { gem install bundler }
+    isInstalled tmux || {
+      brew install tmux
+    }
+    isInstalled tree || {
+      brew install tree
+    }
+    isInstalled mint || {
+      brew install mint
+    }
+    isInstalled fzy || {
+      brew install fzy
+    }
+    isInstalled ag || {
+      brew install the_silver_searcher
+    }
+    isInstalled bundle || {
+      gem install bundler
+    }
+    # isInstalled pod || { gem install cocoapods }
     # isInstalled sourcekitten || { brew install sourcekitten }
     # isInstalled hub || { brew install hub }
     # isInstalled ctags || { brew install ctags }
