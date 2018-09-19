@@ -6,7 +6,7 @@
 	prompt = false
 [core]
 	quotepath = false
-	editor = /usr/local/bin/vim
+	editor = vim
 [alias]
 	a = add
 	ap = add -p

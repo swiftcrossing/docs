@@ -59,8 +59,12 @@ alias less="less -R"
 
 alias tree="tree -NC -l"
 
+# ifconfig
+#alias ip=‘echo local; ifconfig en0 | grep inet| grep -v inet6| sed -e ’\’‘s/netmask.*[0-9]$//g’\‘’| sed -e ’\’‘s/[^0-9.]//g’\‘’; echo global;curl ifconfig.co’
+
 # Xcode Aliases
-alias purgeallbuilds='rm -rf ~/Library/Developer/Xcode/DerivedData/*'
+alias deletederiveddata='rm -rf ~/Library/Developer/Xcode/DerivedData/*'
+alias ddd='deletederiveddata'
 
 # vim Aliases
 alias bashrc="vim $HOME/.bashrc; if [ -f $HOME/.bash_profile ] ; then . $HOME/.bash_profile ; echo 'Sourced .bash_profile' ; else . $HOME/.bashrc ; echo 'Sourced .bashrc' ; fi"
@@ -68,7 +72,7 @@ alias bashaliases="vim $HOME/.bash_aliases; . $HOME/.bash_aliases ; echo 'Source
 alias vimrc="vim $HOME/.vimrc"
 alias vimrclocal="vim $HOME/.vimrc_local"
 alias gitconfig="vim $HOME/.gitconfig"
-alias vimproj="echo $(git rev-parse --show-toplevel); vim  $(git rev-parse --show-toplevel)/*.xcodeproj/project.pbxproj"
+alias vimproj="echo $(git rev-parse --show-toplevel); vim $(git rev-parse --show-toplevel)/*.xcodeproj/project.pbxproj"
 alias vim='vim -p ' # make sure vim opens up tabs for multiple files
 
 # ctags Aliases
@@ -101,6 +105,8 @@ alias grbo='git rebase --onto'
 alias grhe='git reset HEAD'
 alias grha='git reset --hard'
 alias gst='git stash'
+alias grbdev='git rb origin/develop'
+alias grbidev='git rbi origin/develop'
 
 # gitk Aliases
 alias gitk='gitk 2>/dev/null &'
