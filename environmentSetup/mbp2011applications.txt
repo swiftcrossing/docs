@@ -1,0 +1,74 @@
+total 56
+drwxrwxr-x+ 73 root         admin   2482 Sep 18 22:42 .
+drwxr-xr-x  38 root         wheel   1360 Sep 18 21:57 ..
+-rw-rw-r--   1 root         admin  20484 May 22 08:29 .DS_Store
+-rw-r--r--   1 root         wheel      0 Jul 16  2017 .localized
+drwxr-xr-x   3 root         wheel    102 Jan  7  2017 1Password 6.app
+drwxr-xr-x   3 root         wheel    102 Aug 21  2016 AirMount.app
+drwxr-xr-x@  3 renrawnalon  admin    102 Dec  1  2015 Android Studio.app
+drwxr-xr-x@  3 renrawnalon  admin    102 Oct 19  2014 Anki.app
+drwxr-xr-x@  3 root         wheel    102 Sep 18 21:07 App Store.app
+drwxr-xr-x@  3 root         wheel    102 Sep 18 21:07 Automator.app
+drwxr-xr-x   3 root         admin    102 Aug  5 08:57 Backblaze.app
+drwxr-xr-x@  3 root         wheel    102 Sep 18 21:07 Calculator.app
+drwxr-xr-x@  3 root         wheel    102 Sep 18 21:07 Calendar.app
+drwxr-xr-x@  3 root         wheel    102 Sep 18 21:07 Chess.app
+drwxr-xr-x@  3 root         wheel    102 Sep 18 21:07 Contacts.app
+drwxr-xr-x@  3 root         wheel    102 Sep 18 21:07 DVD Player.app
+drwxr-xr-x@  3 root         wheel    102 Sep 18 21:07 Dashboard.app
+drwxr-xr-x   3 root         wheel    102 Jul 31 07:24 DevCleaner.app
+drwxr-xr-x@  3 root         wheel    102 Sep 18 21:07 Dictionary.app
+drwxr-xr-x@  3 renrawnalon  admin    102 Sep 12 07:25 Dropbox.app
+drwxr-xr-x   3 root         wheel    102 Feb 28  2016 Evernote.app
+drwxr-xr-x@  3 root         wheel    102 Sep 18 21:07 FaceTime.app
+drwxr-xr-x@  4 renrawnalon  admin    136 Apr 24  2013 Firefox.app
+drwxr-xr-x   3 renrawnalon  staff    102 Apr 24 22:39 Flux.app
+drwxr-xr-x@  3 root         wheel    102 Sep 18 21:07 Font Book.app
+drwxr-xr-x   3 root         wheel    102 Mar 11  2012 GarageBand.app
+drwxr-xr-x@  3 renrawnalon  admin    102 Nov 27  2015 Genymotion.app
+drwxrwxr-x@  3 renrawnalon  admin    102 Sep 15 17:30 Google Chrome.app
+drwxrwxr-x   8 root         wheel    272 May 23 14:43 GoogleJapaneseInput.localized
+drwxr-xr-x@  3 root         wheel    102 Sep 18 21:07 Image Capture.app
+drwxr-xr-x   3 root         wheel    102 Dec 17  2017 KakaoTalk.app
+drwxr-xr-x@  3 renrawnalon  admin    102 Sep  5  2016 KeePassX.app
+drwxr-xr-x   3 root         wheel    102 Sep 18 22:07 LINE.app
+drwxr-xr-x@  3 root         wheel    102 Sep 18 21:07 Launchpad.app
+drwxr-xr-x@  3 root         wheel    102 Sep 18 21:07 Mail.app
+drwxr-xr-x@  3 root         wheel    102 Sep 18 21:07 Maps.app
+drwxr-xr-x@  3 root         wheel    102 Sep 18 21:07 Messages.app
+drwxrwxr-x   3 root         admin    102 May 11  2011 Microsoft Messenger.app
+drwxrwxr-x@ 13 root         admin    442 Jun  8  2015 Microsoft Office 2011
+lrwxr-xr-x   1 root         admin     92 Apr 13  2015 Microsoft Silverlight -> /Library/Internet Plug-Ins/Silverlight.plugin/Contents/Resources/Silverlight Preferences.app
+drwxr-xr-x@  3 root         wheel    102 Sep 18 21:07 Mission Control.app
+drwxrwxr-x   3 renrawnalon  admin    102 Feb  4  2011 My Secure Backup.app
+drwxr-xr-x@  3 root         wheel    102 Sep 18 21:07 Notes.app
+drwxr-xr-x@  3 root         wheel    102 Sep 18 21:07 Photo Booth.app
+drwxr-xr-x@  3 root         wheel    102 Sep 18 21:07 Photos.app
+drwxr-xr-x@  3 renrawnalon  admin    102 Oct 25  2010 PlayOnMac.app
+drwxr-xr-x@  3 root         wheel    102 Sep 18 21:07 Preview.app
+drwxr-xr-x@  3 root         wheel    102 Sep 18 21:07 QuickTime Player.app
+drwxr-xr-x@  3 root         wheel    102 Sep 18 21:07 Reminders.app
+drwxrwxr-x   3 root         admin    102 May 11  2011 Remote Desktop Connection.app
+drwxr-xr-x@  3 root         wheel    102 Sep 20 09:40 Safari.app
+drwxrwxr-x   3 root         admin    102 Jun 21  2011 Seagate Diagnostics.app
+drwxr-xr-x@  3 root         wheel    102 Sep 18 21:07 Siri.app
+drwxr-xr-x   3 renrawnalon  staff    102 Jun 26 21:29 Skype.app
+drwxr-xr-x@  3 renrawnalon  admin    102 Mar 31 07:04 Slack.app
+drwxrwxrwx   3 renrawnalon  admin    102 Dec 22  2008 Spark.app
+drwxr-xr-x@  3 root         wheel    102 Sep 18 21:07 Stickies.app
+drwxr-xr-x@  3 root         wheel    102 Sep 18 21:07 System Preferences.app
+drwxrwxr-x  15 root         admin    510 Aug  7  2015 TeX
+drwxr-xr-x@  3 root         wheel    102 Sep 18 21:07 TextEdit.app
+drwxr-xr-x@  3 root         wheel    102 Sep 18 21:07 Time Machine.app
+drwxr-xr-x+ 27 root         admin    918 Dec 24  2017 Utilities
+drwxr-xr-x   3 renrawnalon  admin    102 Jul 15  2011 VLC.app
+drwxr-xr-x   3 root         admin    102 Apr 18  2016 VirtualBox.app
+drwxr-xr-x   3 renrawnalon  staff    102 Sep 12 07:17 Xcode.app
+drwxr-xr-x@  3 root         wheel    102 Sep 18 21:07 iBooks.app
+drwxr-xr-x   3 root         wheel    102 Jul 28  2011 iDVD.app
+drwxr-xr-x   3 root         wheel    102 Apr 20 22:04 iMovie.app
+drwxr-xr-x   3 root         wheel    102 Mar 24  2015 iPhoto.app
+drwxr-xr-x   3 renrawnalon  staff    102 Nov 16  2016 iTerm.app
+drwxr-xr-x@  3 root         wheel    102 Jul 28 17:47 iTunes.app
+drwxr-xr-x   3 root         wheel    102 Jul 28  2011 iWeb.app
+drwxrwxrwx@  8 renrawnalon  admin    272 May 30  2010 mi2.1

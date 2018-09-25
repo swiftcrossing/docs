@@ -1,0 +1,8 @@
+total 8
+drwxr-xr-x   7 root  wheel   238 Sep  5 08:16 .
+drwxr-xr-x+ 70 root  wheel  2380 Aug  5 08:56 ..
+drwxr-xr-x   3 root  wheel   102 Aug  5 08:56 BackblazeBackup.prefPane
+lrwxr-xr-x   1 root  wheel   101 Jun 30 15:46 JavaControlPanel.prefPane -> /Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/lib/deploy/JavaControlPanel.prefPane
+drwxr-xr-x@  3 root  admin   102 Apr 11  2017 MenuMeters.prefPane
+drwxr-xr-x@  3 root  admin   102 Sep 19  2014 Network Link Conditioner.prefPane
+drwxrwxr-x   3 root  wheel   102 May  9  2014 TeXDistPrefPane.prefPane
