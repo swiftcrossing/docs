@@ -90,6 +90,12 @@ set autoindent        " carries over previous indent to the next line
 set smarttab          " A tab infront of a line inserts spaces or tabs according to expandtab
 set pastetoggle=<F2>  " Toggle set paste
 
+" configure expanding of tabs for various file types
+au BufRead,BufNewFile *.py set expandtab
+au BufRead,BufNewFile *.c set noexpandtab
+au BufRead,BufNewFile *.h set noexpandtab
+au BufRead,BufNewFile Makefile* set noexpandtab
+
 " Tell vim to remember certain things when we exit
 "  '100 : marks will be remembered for up to 100 previously edited files
 "  "100 : will save up to 100 lines for each register

@@ -99,6 +99,7 @@ alias gl='git log'
 alias gmnf='git merge --no-ff'
 alias grb='git rebase'
 alias grba='git rebase --abort'
+alias grbs='git rebase --skip'
 alias grbc='git rebase --continue'
 alias grbi='git rebase -i'
 alias grbo='git rebase --onto'
@@ -120,6 +121,10 @@ alias bep='bundle exec pod'
 
 # screen Aliases
 alias screen='screen -R'
+
+# iOS Simulator Screenshots
+alias simscreenshot='xcrun simctl io booted recordVideo appvideo.mov'
+alias simvideo='xcrun simctl io booted screenshot'
 
 # tmux Startup function
 function tmx()

@@ -88,6 +88,9 @@ main() {
     isInstalled tmux || {
       brew install tmux
     }
+    isInstalled node || {
+      brew install node
+    }
     isInstalled tree || {
       brew install tree
     }

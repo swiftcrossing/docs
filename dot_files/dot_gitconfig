@@ -40,3 +40,4 @@
 	email = renrawnalon@gmail.com
 [push]
 	default = simple
+	followTags = true
