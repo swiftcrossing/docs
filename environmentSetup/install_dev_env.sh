@@ -81,10 +81,10 @@ main() {
     #rm -rf ~/Library/Application\ Support/Alcatraz                                          #
     ##########################################################################################
 
-    #isInstalled vapor || {
-    #  brew tap vapor/tap
-    #  brew install vapor/tap/vapor
-    #}
+    isInstalled vapor || {
+      brew tap vapor/tap
+      brew install vapor/tap/vapor
+    }
     isInstalled tmux || {
       brew install tmux
     }
