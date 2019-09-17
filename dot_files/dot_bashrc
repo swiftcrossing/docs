@@ -79,6 +79,9 @@ alias vim='vim -p ' # make sure vim opens up tabs for multiple files
 alias ctags="`brew --prefix`/bin/ctags"
 alias ctagsgen='ctags -R -f ./.git/tags .'
 
+#npm Aliases
+alias npm-local='PATH=$(npm bin):$PATH'
+
 # git Aliases
 alias ga='git add'
 alias gaA='git add -A'
@@ -106,8 +109,10 @@ alias grbo='git rebase --onto'
 alias grhe='git reset HEAD'
 alias grha='git reset --hard'
 alias gst='git stash'
-alias grbdev='git rb origin/develop'
-alias grbidev='git rbi origin/develop'
+alias grbdev='git fetch -p; git rb origin/develop'
+alias grbmas='git fetch -p; git rb origin/master'
+alias grbidev='git fetch -p; git rbi origin/develop'
+alias grbimas='git fetch -p; git rbi origin/master'
 
 # gitk Aliases
 alias gitk='gitk 2>/dev/null &'
@@ -123,8 +128,8 @@ alias bep='bundle exec pod'
 alias screen='screen -R'
 
 # iOS Simulator Screenshots
-alias simscreenshot='xcrun simctl io booted recordVideo appvideo.mov'
-alias simvideo='xcrun simctl io booted screenshot'
+alias simvideo='xcrun simctl io booted recordVideo appvideo.mov'
+alias simscreenshot='xcrun simctl io booted screenshot'
 
 # tmux Startup function
 function tmx()
