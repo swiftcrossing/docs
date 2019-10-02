@@ -88,6 +88,9 @@ main() {
     isInstalled tmux || {
       brew install tmux
     }
+    isInstalled gpg || {
+      brew install gpg
+    }
     isInstalled node || {
       brew install node
     }
