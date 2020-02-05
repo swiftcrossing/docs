@@ -22,19 +22,16 @@ export PATH=$PATH:/opt/local/bin:/opt/local/sbin
 export PATH=$PATH:$HOME/.local/bin
 export PATH="$HOME/.fastlane/bin:$PATH"
 
-# Setting PATH for Python 2.7
-# The orginal version is saved in .bash_profile.pysave
-export PATH=$PATH:/Library/Frameworks/Python.framework/Versions/2.7/bin
-
-# Setup Ruby environment
-if which rbenv > /dev/null;
-    then eval "$(rbenv init -)";
+# Set `python` and `pip` to use version installed via `pyenv`
+if command -v pyenv 1>/dev/null 2>&1; then
+    eval "$(pyenv init -)"
 fi
-export PATH="$HOME/.rbenv/bin:$PATH"
 
-#Setup Cocoapods to install locally
-export GEM_HOME=$HOME/.gem
-export PATH=$GEM_HOME/bin:$PATH
+# Setup Ruby environment to use version installe via `rbenv`
+if which rbenv > /dev/null; then
+    eval "$(rbenv init -)";
+fi
+
 
 # Unversioned aliases 
 if [ -f ~/.bash_aliases ];

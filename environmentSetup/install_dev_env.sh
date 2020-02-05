@@ -9,14 +9,27 @@ main() {
     echo 'Checking for Homebrew updates...'
     brew update
 
-    # Install Pip 
-    isInstalled pip || {
-        echo 'Install pip...'
-        easy_install pip
-    }
+    ### Use pyenv instead to manage python and pip versions
+    # # Install Pip 
+    # isInstalled pip || {
+    #     echo 'Install pip...'
+    #     easy_install pip
+    # }
 
-    echo 'Checking for pip updates...'
-    pip install --upgrade pip
+    # echo 'Checking for pip updates...'
+    # pip install --upgrade pip
+
+    # Install pyenv
+    isInstalled pyenv || {
+        brew install pyenv
+        # Find latest version
+        python_version=`egrep "^\s+\d\.\d+\.\d+$" <(pyenv install -l) | tail -1`
+        echo "Installing python version: $python_version"
+        pyenv install $python_version
+        pyenv global $python_version
+        pyenv rehash
+        source ~/.bash_profile
+    }
 
     # Install git with gitk
     isInstalled gitk || {
@@ -43,23 +56,25 @@ main() {
         exit 1
     fi
 
-    # Install RubyGems
-    isInstalled gem || {
-        echo 'Check out Xcode.txt for installation instructions...'
-        echo 'Exiting prematurely!!! Setup did not complete!!!'
-        exit 1
-    }
+    ### Use rbenv instead to manage ruby versions
+    # # Install RubyGems
+    # isInstalled gem || {
+    #     echo 'Check out Xcode.txt for installation instructions...'
+    #     echo 'Exiting prematurely!!! Setup did not complete!!!'
+    #     exit 1
+    # }
 
-#   # Install rbenv
-#   isInstalled rbenv || {
-#       brew install rbenv ruby-build
-#       ruby_version=`egrep "^\s+2\.\d+\.\d+$" <(rbenv install -l) | tail -1`
-#       echo "Installing ruby version: $ruby_version"
-#       rbenv install $ruby_version
-#       rbenv global $ruby_version
-#       rbenv rehash
-#       source ~/.bash_profile
-#   }
+    # Install rbenv
+    isInstalled rbenv || {
+        brew install rbenv ruby-build
+        # Find latest version
+        ruby_version=`egrep "^\s+\d\.\d+\.\d+$" <(rbenv install -l) | tail -1`
+        echo "Installing ruby version: $ruby_version"
+        rbenv install $ruby_version
+        rbenv global $ruby_version
+        rbenv rehash
+        source ~/.bash_profile
+    }
 
     # Install Plug - Vim plugin Manager
     if [ -f "$HOME/.vim/autoload/plug.vim" ]; then
