@@ -32,8 +32,7 @@ if which rbenv > /dev/null; then
     eval "$(rbenv init -)";
 fi
 
-
-# Unversioned aliases 
+# Source local aliases managed outside of source control
 if [ -f ~/.bash_aliases ];
 then
 	echo 'Sourced .bash_aliases'
@@ -60,8 +59,11 @@ alias tree="tree -NC -l"
 #alias ip=‘echo local; ifconfig en0 | grep inet| grep -v inet6| sed -e ’\’‘s/netmask.*[0-9]$//g’\‘’| sed -e ’\’‘s/[^0-9.]//g’\‘’; echo global;curl ifconfig.co’
 
 # Xcode Aliases
+alias openproj='open *.xcodeproj'
 alias deletederiveddata='rm -rf ~/Library/Developer/Xcode/DerivedData/*'
 alias ddd='deletederiveddata'
+alias lldd='ll ~/Library/Developer/Xcode/DerivedData/'
+alias cddd='cd ~/Library/Developer/Xcode/DerivedData/'
 
 # vim Aliases
 alias bashrc="vim $HOME/.bashrc; if [ -f $HOME/.bash_profile ] ; then . $HOME/.bash_profile ; echo 'Sourced .bash_profile' ; else . $HOME/.bashrc ; echo 'Sourced .bashrc' ; fi"
@@ -274,4 +276,9 @@ function ssh-gas ()
 function rename ()
 {
     for f in $1*; do mv "$f" $(echo "$f" | sed "s/^$1/$2/g"); done
+}
+
+function removeSpaces ()
+{
+    for f in $1*; do mv "$f" $(echo "$f" | sed "s/ //g"); done
 }
