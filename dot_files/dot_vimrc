@@ -82,9 +82,9 @@ set ttymouse=xterm2		" mouse scrolling in vim
 set mouse=a
 set foldenable
 set background=dark
-set tabstop=2         " 2-space tab indent width
-set shiftwidth=2      " allows you to use < and > to indent/unindent blocks
-set softtabstop=2     " see multiple space characters as a tab
+set tabstop=4         " 2-space tab indent width
+set shiftwidth=4      " allows you to use < and > to indent/unindent blocks
+set softtabstop=4     " see multiple space characters as a tab
 set shiftround        " Indent to nearest tab stop
 set autoindent        " carries over previous indent to the next line
 set smarttab          " A tab infront of a line inserts spaces or tabs according to expandtab
@@ -139,7 +139,7 @@ set hlsearch  " Highlight search results
 set tags+=tags;$HOME,build/tags;$HOME
 
 " always show a tabline
-set showtabline=2
+set showtabline=4
 
 " Let Leader key be <Space> instead of \
 let mapleader = " "
@@ -181,7 +181,7 @@ inoremap kj <Esc>
 " autocmd FileType swift imap <buffer> <C-k> <Plug>(autocomplete_swift_jump_to_placeholder)
 "
 
-autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+autocmd FileType yaml setlocal ts=4 sts=4 sw=4 expandtab
 
 " Jump to current file in tree
 nnoremap <Leader>n :NERDTreeFind<CR>
