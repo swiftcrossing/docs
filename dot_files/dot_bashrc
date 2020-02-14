@@ -33,6 +33,10 @@ if which rbenv > /dev/null; then
     eval "$(rbenv init -)";
 fi
 
+# Setup nmv node management path
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
 # Source local aliases managed outside of source control
 if [ -f ~/.bash_aliases ];
 then

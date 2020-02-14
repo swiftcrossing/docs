@@ -82,19 +82,13 @@ main() {
     else
         curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     fi
-    
-    # Install Alcatraz - Plugin Manager
-    # if [ -d "$HOME/Library/Application Support/Developer/Shared/Xcode/Plug-ins/Alcatraz.xcplugin/" ]; then
-    #     echo '[Alcatraz] is already installed'
-    # else
-    #     curl -fsSL https://raw.githubusercontent.com/supermarin/Alcatraz/master/Scripts/install.sh | sh
-    # fi
-    ##########################################################################################
-    # Uninstall Alcatraz                                                                     #
-    #rm -rf ~/Library/Application\ Support/Developer/Shared/Xcode/Plug-ins/Alcatraz.xcplugin #
-    # Remove all cached data                                                                 #
-    #rm -rf ~/Library/Application\ Support/Alcatraz                                          #
-    ##########################################################################################
+
+    # Install nvm to manager node version
+    isInstalled nvm || {
+      curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
+      nvm install node
+      nvm use node
+    }
 
     isInstalled vapor || {
       brew tap vapor/tap
@@ -105,9 +99,6 @@ main() {
     }
     isInstalled gpg || {
       brew install gpg
-    }
-    isInstalled node || {
-      brew install node
     }
     isInstalled tree || {
       brew install tree
