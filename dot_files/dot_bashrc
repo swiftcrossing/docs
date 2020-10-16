@@ -70,13 +70,13 @@ alias ddd='deletederiveddata'
 alias lldd='ll ~/Library/Developer/Xcode/DerivedData/'
 alias cddd='cd ~/Library/Developer/Xcode/DerivedData/'
 alias cleanupxcode="\
-  du -h -d 1 ~/Library/Developer/Xcode;\
-  cd ~/Library/Developer/Xcode/iOS\ DeviceSupport && pwd && du -sh * | sort -h;\
-  cd ~/Library/Developer/Xcode/watchOS\ DeviceSupport && pwd && du -sh * | sort -h;\
-  cd ~/Library/Developer/Xcode/Archives && pwd && du -sh * | sort -h;\
-  cd ~/Library/Developer/CoreSimulator && pwd && du -sh * | sort -h;\
-  cd ~/Library/Developer/CoreSimulator/Devices && pwd && du -sh * | sort -h;\
-  cd ~/Library/Developer/CoreSimulator/Caches && pwd && du -sh * | sort -h;\
+  du -h -d 1 ~/Library/Developer/Xcode | sort -h;\
+  cd ~/Library/Developer/Xcode/iOS\ DeviceSupport && pwd && du -h -d 1 . | sort -h;\
+  cd ~/Library/Developer/Xcode/watchOS\ DeviceSupport && pwd && du -h -d 1 . | sort -h;\
+  cd ~/Library/Developer/Xcode/Archives && pwd && du -h -d 1 . | sort -h;\
+  cd ~/Library/Developer/CoreSimulator && pwd && du -h -d 1 . | sort -h;\
+  cd ~/Library/Developer/CoreSimulator/Devices && pwd && du -h -d 1 . | sort -h;\
+  cd ~/Library/Developer/CoreSimulator/Caches && pwd && du -h -d 1 . | sort -h;\
   cd ~/Library/Caches && pwd && du -sh com.apple.dt.Xcode && du -sh org.carthage.CarthageKit;\
   echo 'run: \`xcrun simctl delete unavailable\` to remove unused simulators from ~/Library/Developer/CoreSimulator';\
   echo 'run: \`(cd ~/Library/Developer/CoreSimulator && grep -irn SimRuntime.iOS- .)\` to find other old Simulators to delete.';\
