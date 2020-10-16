@@ -69,6 +69,7 @@ alias deletederiveddata='rm -rf ~/Library/Developer/Xcode/DerivedData/*'
 alias ddd='deletederiveddata'
 alias lldd='ll ~/Library/Developer/Xcode/DerivedData/'
 alias cddd='cd ~/Library/Developer/Xcode/DerivedData/'
+alias cleanupxcode='du -h -d 1 ~/Library/Developer/Xcode; cd ~/Library/Developer/Xcode/iOS\ DeviceSupport/; pwd; du -sh *; cd ~/Library/Developer/Xcode/Archives; pwd; du -sh *; cd ~/Library/Developer/CoreSimulator; pwd; du -sh *'
 
 # vim Aliases
 alias bashrc="vim $HOME/.bashrc; if [ -f $HOME/.bash_profile ] ; then . $HOME/.bash_profile ; echo 'Sourced .bash_profile' ; else . $HOME/.bashrc ; echo 'Sourced .bashrc' ; fi"
