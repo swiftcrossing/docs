@@ -32,9 +32,11 @@ function make_directory {
     fi  
 }
 
-# bashrc files
+# zshrc/bashrc files
 super_link $HOME/docs/dot_files/dot_bashrc $HOME/.bashrc
+super_link $HOME/docs/dot_files/dot_zshrc $HOME/.zshrc
 super_link $HOME/docs/dot_files/dot_bash_profile $HOME/.bash_profile
+super_link $HOME/docs/dot_files/dot_prompty $HOME/.prompty
 
 # ctags files
 super_link $HOME/docs/dot_files/dot_ctags $HOME/.ctags
@@ -44,6 +46,7 @@ super_link $HOME/docs/dot_files/dot_screenrc $HOME/.screenrc
 
 # tmux.conf files
 super_link $HOME/docs/dot_files/dot_tmux.conf $HOME/.tmux.conf
+cp -n $HOME/docs/dot_files/dot_tmuxinator.yml $HOME/.tmuxinator.yml
 
 # inputrc files
 super_link $HOME/docs/dot_files/dot_inputrc $HOME/.inputrc

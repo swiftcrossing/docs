@@ -1,0 +1,11 @@
+name: sesh
+root: ~
+windows:
+    - win1:
+        root: ~/workspace
+    - win2:
+        root: ~/workspace
+    - win3:
+        root: ~/workspace
+    - docs:
+        root: ~/docs

@@ -1,0 +1,31 @@
+## ~/.myprompt.sh
+
+YELLOW="\[\033[0;33m\]"
+NO_COLOR="\[\033[0m\]"
+
+function parse_git_branch () {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
+# 'ZSH_VERSION' only defined in Zsh
+# 'precmd' is a special function name known to Zsh
+
+[ ${ZSH_VERSION} ] && precmd() { myprompt; }
+
+# 'BASH_VERSION' only defined in Bash
+# 'PROMPT_COMMAND' is a special environment variable name known to Bash
+
+[ ${BASH_VERSION} ] && PROMPT_COMMAND=myprompt
+
+# function called every time shell is about to draw prompt
+myprompt() {
+  if [ ${ZSH_VERSION} ]; then
+    # Zsh prompt expansion syntax
+    setopt prompt_subst
+    PS1='%{%F{cyan}%}%~ %{%F{yellow}%}%$(parse_git_branch) %{%F{white}%}%# %{%f%}'
+  elif [ ${BASH_VERSION} ]; then
+    # Bash prompt expansion syntax
+    export PROMPT_COMMAND='PS1X=$(p="${PWD#${HOME}}"; [ "${PWD}" != "${p}" ] && printf "~"; IFS=/; for q in ${p:1}; do printf /${q:0:2}; done; printf "${q:2}")'
+    export PS1="$NO_COLOR\${PS1X}$YELLOW\$(parse_git_branch)$NO_COLOR\$ "
+  fi
+}

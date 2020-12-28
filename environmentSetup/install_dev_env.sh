@@ -97,6 +97,9 @@ main() {
     isInstalled tmux || {
       brew install tmux
     }
+    isInstalled tmuxinator || {
+      brew install tmuxinator
+    }
     isInstalled gpg || {
       brew install gpg
     }
