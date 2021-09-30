@@ -13,6 +13,8 @@ export PATH=$PATH:$HOME/.local/bin
 export PATH="$HOME/.fastlane/bin:$PATH"
 export CPATH="$(xcrun --show-sdk-path)/usr/include"
 
+setopt interactivecomments
+
 # Set `python` and `pip` to use version installed via `pyenv`
 if command -v pyenv 1>/dev/null 2>&1; then
     eval "$(pyenv init -)"
