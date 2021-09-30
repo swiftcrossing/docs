@@ -34,6 +34,15 @@ if command -v rbenv > /dev/null; then
     eval "$(rbenv init - zsh)";
 fi
 
+if command -v jenv > /dev/null; then
+    export PATH="$HOME/.jenv/bin:$PATH"
+    eval "$(jenv init -)"
+    export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+    export PATH=${JAVA_HOME}/bin:$PATH
+fi
+
+#export JAVA_HOME=`/usr/libexec/java_home -v 11.0.11`
+
 # Source local aliases managed outside of source control
 if [ -f ~/.bash_aliases ];
 then

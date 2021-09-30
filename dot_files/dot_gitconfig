@@ -1,43 +1,50 @@
+[init]
+        templatedir = /Users/nolan.warner/.acn-security-tools/git-template
 [color]
-	ui = true
+        ui = true
 [diff]
-	tool = vimdiff
+        tool = vimdiff
 [difftool]
-	prompt = false
+        prompt = false
 [core]
-	quotepath = false
-	editor = vim
+        quotepath = false
+        editor = vim
 [alias]
-	a = add
-	ap = add -p
-	aproj = "!sh -c 'git add $(git rev-parse --show-toplevel)/*.xcodeproj/project.pbxproj' -"
-	b = branch
-	c = commit
-	ca = commit --amend
-	cm = commit -m
-	co = checkout
-	cob = checkout -b
-	cp = cherry-pick
-	d = diff
-	dt = difftool
-	dc = diff --cached
-	f = fetch
-	fa = fetch --all
-	fp = fetch -p
-	l = log
-	mnf = merge --no-ff
-	rb = rebase
-	rbi = rebase -i
-	rbo = rebase --onto
-	rhe = reset HEAD
-	rha = reset --hard
-	s = status
-	st = stash
+        a = add
+        ap = add -p
+        aproj = "!sh -c 'git add $(git rev-parse --show-toplevel)/*.xcodeproj/project.pbxproj' -"
+        b = branch
+        c = commit
+        ca = commit --amend
+        cm = commit -m
+        co = checkout
+        cob = checkout -b
+        cp = cherry-pick
+        d = diff
+        dt = difftool
+        dc = diff --cached
+        f = fetch
+        fa = fetch --all
+        fp = fetch -p
+        l = log
+        mnf = merge --no-ff
+        rb = rebase
+        rbi = rebase -i
+        rbo = rebase --onto
+        rhe = reset HEAD
+        rha = reset --hard
+        s = status
+        st = stash
 [rerere]
-	enabled = true
+        enabled = true
 [user]
-	name = Nolan Warner
-	email = nolan.warner@accenture.com
+        name = Nolan Warner
+        email = nolan.warner@accenture.com
 [push]
-	default = simple
-	followTags = true
+        default = simple
+        followTags = true
+[filter "lfs"]
+        clean = git-lfs clean -- %f
+        smudge = git-lfs smudge -- %f
+        process = git-lfs filter-process
+        required = true
