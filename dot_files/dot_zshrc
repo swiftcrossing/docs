@@ -93,6 +93,11 @@ alias cleanupxcode="\
   echo 'check \`echo https://ajith.blog/xcode-users-can-free-up-space-on-your-mac | pbcopy\` for more details and tips.';\
   "
 
+function showprovisioning ()
+{
+    (cd ~/Library/MobileDevice/Provisioning\ Profiles && ls -l | awk '{print $9}' | xargs -L 1 security cms -D -i | grep -e UUID -e AppIDName -e ExpirationDate -A 1 | grep "$1" -A 6)
+}
+
 # vim Aliases
 alias bashrc="vim $HOME/.bashrc; if [ -f $HOME/.bash_profile ] ; then . $HOME/.bash_profile ; echo 'Sourced .bash_profile' ; else . $HOME/.bashrc ; echo 'Sourced .bashrc' ; fi"
 alias zshrc="vim $HOME/.zshrc; . $HOME/.zshrc ; echo 'Sourced .zshrc'"
