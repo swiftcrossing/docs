@@ -90,10 +90,10 @@ main() {
       nvm use node
     }
 
-    isInstalled vapor || {
-      brew tap vapor/tap
-      brew install vapor/tap/vapor
-    }
+    #isInstalled vapor || {
+    #  brew tap vapor/tap
+    #  brew install vapor/tap/vapor
+    #}
     isInstalled tmux || {
       brew install tmux
     }
