@@ -15,6 +15,9 @@ export CPATH="$(xcrun --show-sdk-path)/usr/include"
 
 setopt interactivecomments
 
+autoload -Uz compinit
+compinit
+
 # Setup Homebrew path
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
