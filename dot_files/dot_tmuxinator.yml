@@ -2,10 +2,10 @@ name: sesh
 root: ~
 windows:
     - win1:
-        root: ~/workspace
+        root: ~/
     - win2:
-        root: ~/workspace
+        root: ~/
     - win3:
-        root: ~/workspace
+        root: ~/
     - docs:
         root: ~/docs
