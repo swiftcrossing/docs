@@ -28,7 +28,7 @@ fi
 
 # Setup Ruby environment to use version installe via `rbenv`
 if command -v rbenv > /dev/null; then
-    eval "$(rbenv init -)";
+    eval "$(rbenv init - zsh)";
 fi
 
 # Setup nmv node management path
