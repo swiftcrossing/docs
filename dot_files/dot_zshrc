@@ -10,6 +10,7 @@ export EDITOR=vim
 #export PATH=$PATH:$HOME/infer-osx/infer/bin
 export PATH=$PATH:/opt/local/bin:/opt/local/sbin
 export PATH=$PATH:$HOME/.local/bin
+export PATH=$PATH:$HOME/.pub-cache/bin # Dart (Flutter) Path
 export PATH="$HOME/.fastlane/bin:$PATH"
 #export CPATH="$(xcrun --show-sdk-path)/usr/include"
 
