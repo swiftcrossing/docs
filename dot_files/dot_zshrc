@@ -12,6 +12,8 @@ export PATH=$PATH:/opt/local/bin:/opt/local/sbin
 export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:$HOME/.pub-cache/bin # Dart (Flutter) Path
 export PATH="$HOME/.fastlane/bin:$PATH"
+export GEM_HOME=$HOME/.gem # For user install of cocoapods/other gems
+export PATH=$GEM_HOME/bin:$PATH # For user install of cocoapods/other gems
 #export CPATH="$(xcrun --show-sdk-path)/usr/include"
 
 setopt interactivecomments
