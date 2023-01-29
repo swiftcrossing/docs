@@ -36,8 +36,10 @@
 [rerere]
 	enabled = true
 [user]
-	name = Nolan Warner
-	email = renrawnalon@gmail.com
+	name = Nolan W
+	email = swiftcrossing@proton.me
 [push]
 	default = simple
 	followTags = true
+[init]
+	defaultBranch = main
